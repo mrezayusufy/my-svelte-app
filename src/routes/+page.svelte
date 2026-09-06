@@ -101,7 +101,7 @@
 	<section class="max-w-4xl mx-auto px-6 py-12">
 		<div class="featured-image relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-800/40 shadow-2xl shadow-indigo-950/50">
 			<img
-				src="{base}/blog-img1.jpg"
+				src="/assets/blog-img1.jpg"
 				alt="Café Giovanni's Kaffeewelt"
 				class="w-full h-auto object-cover max-h-[500px]"
 			/>
