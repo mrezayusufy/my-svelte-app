@@ -1,13 +1,13 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { asset } from '$app/paths';
 </script>
 
 <section class="rs-enjoy-food p-r z-1 py-5">
 	<div class="shape shape-one">
-		<span><img src="{base}/assets/images/home-restaurant/features/f-shape2.png" alt="Feature shape" /></span>
+		<span><img src={asset('/assets/images/home-restaurant/features/f-shape2.png')} alt="Feature shape" /></span>
 	</div>
 	<div class="shape shape-two">
-		<span><img src="{base}/assets/images/home-restaurant/features/f-shape1.png" alt="Feature shape" /></span>
+		<span><img src={asset('/assets/images/home-restaurant/features/f-shape1.png')} alt="Feature shape" /></span>
 	</div>
 
 	<div class="container">
@@ -18,17 +18,17 @@
 					<div class="row">
 						<div class="col-md-6">
 							<div class="bistly-image image-radius mb-4" data-aos="fade-down" data-aos-duration="1000">
-								<img src="{base}/assets/images/home-restaurant/features/feat-img1.jpg" alt="Specialty plate" />
+								<img src={asset('/assets/images/home-restaurant/features/feat-img1.jpg')} alt="Specialty plate" />
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="bistly-image image-radius mb-4" data-aos="fade-down" data-aos-duration="1100">
-								<img src="{base}/assets/images/home-restaurant/features/feat-img2.jpg" alt="Artisan dessert" />
+								<img src={asset('/assets/images/home-restaurant/features/feat-img2.jpg')} alt="Artisan dessert" />
 							</div>
 						</div>
 						<div class="col-sm-12">
 							<div class="bistly-image mb-4" data-aos="fade-up" data-aos-duration="1200">
-								<img src="{base}/assets/images/home-restaurant/features/feat-img3.jpg" alt="Gourmet dinner" />
+								<img src={asset('/assets/images/home-restaurant/features/feat-img3.jpg')} alt="Gourmet dinner" />
 							</div>
 						</div>
 					</div>
@@ -55,7 +55,7 @@
 			<div class="col-xl-3 col-md-6 order-xl-3 order-1">
 				<div class="bistly-image-box image-box-two mb-xl-0 mb-5">
 					<div class="bistly-image" data-aos="fade-up" data-aos-duration="1000">
-						<img src="{base}/assets/images/home-restaurant/features/feat-img4.png" alt="Signature cocktail" />
+						<img src={asset('/assets/images/home-restaurant/features/feat-img4.png')} alt="Signature cocktail" />
 					</div>
 				</div>
 			</div>

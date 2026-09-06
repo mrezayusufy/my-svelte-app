@@ -1,26 +1,26 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { asset } from '$app/paths';
 
 	const blogPosts = [
 		{
 			title: 'Easy Summer Dishes to Keep You Cool & Full',
 			author: 'John',
 			date: 'May 19, 2025',
-			image: `${base}/blog-img1.jpg`,
+			image: asset('/blog-img1.jpg'),
 			duration: 1000
 		},
 		{
 			title: 'A Day in the Life of Our Head Chef at Delicia',
 			author: 'John',
 			date: 'May 19, 2025',
-			image: `${base}/assets/images/home-restaurant/blog/blog-img2.jpg`,
+			image: asset('/assets/images/home-restaurant/blog/blog-img2.jpg'),
 			duration: 1200
 		},
 		{
 			title: 'The Mediterranean Influence Behind Our New Menu Items',
 			author: 'John',
 			date: 'May 19, 2025',
-			image: `${base}/assets/images/home-restaurant/blog/blog-img3.jpg`,
+			image: asset('/assets/images/home-restaurant/blog/blog-img3.jpg'),
 			duration: 1400
 		}
 	];

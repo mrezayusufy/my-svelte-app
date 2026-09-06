@@ -1,23 +1,23 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { asset } from '$app/paths';
 
 	const chefs = [
 		{
 			name: 'Massimo Bottura',
 			position: 'Main Chef',
-			image: `${base}/assets/images/home-restaurant/team/team-img1.jpg`,
+			image: asset('/assets/images/home-restaurant/team/team-img1.jpg'),
 			duration: 1000
 		},
 		{
 			name: 'Alain Ducasse',
 			position: 'Junior Chef',
-			image: `${base}/assets/images/home-restaurant/team/team-img2.jpg`,
+			image: asset('/assets/images/home-restaurant/team/team-img2.jpg'),
 			duration: 1200
 		},
 		{
 			name: 'Gordon Ramsay',
 			position: 'Junior Chef',
-			image: `${base}/assets/images/home-restaurant/team/team-img3.jpg`,
+			image: asset('/assets/images/home-restaurant/team/team-img3.jpg'),
 			duration: 1400
 		}
 	];

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { resolve, asset } from '$app/paths';
 	import NavMenu from './NavMenu.svelte';
 
 	let scrollY = $state(0);
@@ -41,9 +41,9 @@
 				<div class="primary-menu">
 					<!-- Site Branding -->
 					<div class="site-branding">
-						<a href="/" class="brand-logo">
+						<a href={resolve('/')} class="brand-logo">
 							<img
-								src="{base}/assets/logo.svg"
+								src={asset('/assets/logo.svg')}
 								alt="Giovanni's Kaffeewelt Logo"
 							/>
 						</a>

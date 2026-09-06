@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { asset } from '$app/paths';
 
 	let activeFood = $state<number | null>(null);
 	let foodX = $state(0);
@@ -9,17 +9,17 @@
 		{
 			name: 'Lobster',
 			desc: 'Mixed Salad & Drinks',
-			image: `${base}/assets/images/home-restaurant/menu/menu-img1.jpg`
+			image: asset('/assets/images/home-restaurant/menu/menu-img1.jpg')
 		},
 		{
 			name: 'Chickens',
 			desc: 'Mixed Salad & Soft Drinks',
-			image: `${base}/assets/images/home-restaurant/menu/menu-img2.jpg`
+			image: asset('/assets/images/home-restaurant/menu/menu-img2.jpg')
 		},
 		{
 			name: 'Risotto',
 			desc: 'Mixed Soft Drinks',
-			image: `${base}/assets/images/home-restaurant/menu/menu-img3.jpg`
+			image: asset('/assets/images/home-restaurant/menu/menu-img3.jpg')
 		}
 	];
 

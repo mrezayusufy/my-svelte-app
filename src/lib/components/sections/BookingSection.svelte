@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { asset } from '$app/paths';
 </script>
 
 <section
 	class="rs-booking bg_cover p-r z-1 py-5"
 	id="reservation"
-	style="background-image: url('{base}/assets/images/home-restaurant/bg/booking-bg.jpg')"
+	style="background-image: url('{asset('/assets/images/home-restaurant/bg/booking-bg.jpg')}')"
 >
 	<div class="container">
 		<div class="row py-5 justify-content-center">

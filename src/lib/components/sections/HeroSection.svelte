@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { base } from '$app/paths';
+	import { asset } from '$app/paths';
 	import { gsap } from 'gsap';
 
 	let sectionEl = $state<HTMLElement>();
@@ -38,14 +38,14 @@
 <section
 	bind:this={sectionEl}
 	class="rs-hero bg_cover"
-	style="background-image: url('{base}/assets/images/home-restaurant/hero/hero-bg.jpg');"
+	style="background-image: url('{asset('/assets/images/home-restaurant/hero/hero-bg.jpg')}');"
 >
 	<!-- Hero Arch Images -->
 	<div class="hero-image image_one">
-		<img src="{base}/assets/images/home-restaurant/hero/hero-img1.jpg" alt="Italian Dish" />
+		<img src={asset('/assets/images/home-restaurant/hero/hero-img1.jpg')} alt="Italian Dish" />
 	</div>
 	<div class="hero-image image_two">
-		<img src="{base}/assets/images/home-restaurant/hero/hero-img2.jpg" alt="Artisan Pasta" />
+		<img src={asset('/assets/images/home-restaurant/hero/hero-img2.jpg')} alt="Artisan Pasta" />
 	</div>
 
 	<div class="container">
@@ -54,7 +54,7 @@
 				<!-- Hero Content -->
 				<div class="hero-content text-center">
 					<img
-						src="{base}/assets/images/home-restaurant/hero/sub.png"
+						src={asset('/assets/images/home-restaurant/hero/sub.png')}
 						class="sub-head"
 						alt="Decorative Subheading"
 					/>

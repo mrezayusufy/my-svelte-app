@@ -1,13 +1,13 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { resolve, asset } from '$app/paths';
 </script>
 
 <footer class="default-footer rs-footer pt-5 p-r z-1" id="contact">
 	<div class="shape shape-one">
-		<img src="{base}/assets/images/home-restaurant/footer/shape1.png" alt="Footer decorative shape" />
+		<img src={asset('/assets/images/home-restaurant/footer/shape1.png')} alt="Footer decorative shape" />
 	</div>
 	<div class="shape shape-two">
-		<img src="{base}/assets/images/home-restaurant/footer/shape2.png" alt="Footer decorative shape" />
+		<img src={asset('/assets/images/home-restaurant/footer/shape2.png')} alt="Footer decorative shape" />
 	</div>
 
 	<div class="container">
@@ -18,9 +18,9 @@
 					<!-- Footer About Widget -->
 					<div class="footer-widget footer-about-widget mb-4 pb-3" data-aos="fade-up" data-aos-duration="800">
 						<div class="widget-content">
-							<a href="/" class="mb-4 d-inline-block brand-logo-footer">
+							<a href={resolve('/')} class="mb-4 d-inline-block brand-logo-footer">
 								<img
-									src="{base}/assets/logo.svg"
+									src={asset('/assets/logo.svg')}
 									alt="Giovanni's Kaffeewelt Logo"
 								/>
 							</a>

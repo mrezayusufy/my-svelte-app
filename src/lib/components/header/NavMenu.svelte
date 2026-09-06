@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { resolve, asset } from '$app/paths';
 
 	let {
 		mobileMenuOpen = $bindable(false)
@@ -22,9 +22,9 @@
 	<!-- Mobile Menu Top -->
 	<div class="theme-menu-top d-flex justify-content-between d-block d-lg-none mb-4">
 		<div class="site-branding">
-			<a href="/" class="brand-logo" onclick={closeMenu}>
+			<a href={resolve('/')} class="brand-logo" onclick={closeMenu}>
 				<img
-					src="{base}/assets/logo.svg"
+					src={asset('/assets/logo.svg')}
 					alt="Giovanni's Kaffeewelt Logo"
 					style="max-height: 48px; width: auto;"
 				/>
@@ -43,15 +43,9 @@
 	<nav class="main-menu">
 		<ul>
 			<li class="menu-item has-children">
-				<a href="/" onclick={(e) => { e.preventDefault(); toggleSubMenu('home'); }}>
+				<a href={resolve('/')}>
 					Home
-					<span class="dd-trigger ms-1"><i class="far fa-angle-down"></i></span>
 				</a>
-				<ul class="sub-menu" style="display: {activeSubMenu === 'home' || !mobileMenuOpen ? '' : 'none'};">
-					<li><a href="/" onclick={closeMenu}>Home Restaurant</a></li>
-					<li><a href="#about" onclick={closeMenu}>About Us</a></li>
-					<li><a href="#menu" onclick={closeMenu}>Menu</a></li>
-				</ul>
 			</li>
 			<li class="menu-item"><a href="#about" onclick={closeMenu}>About Us</a></li>
 			<li class="menu-item has-children">
