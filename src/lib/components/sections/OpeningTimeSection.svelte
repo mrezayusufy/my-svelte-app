@@ -14,14 +14,14 @@
 	<div class="container">
 		<div class="row justify-content-center py-xl-4 mt-xl-5">
 			<div class="col-xl-6 col-lg-8 col-md-10">
-				<div class="bistly-content-box text-white text-center text-xl-start mb-5">
+				<div class="giovanni-content-box text-white text-center text-xl-start mb-5">
 					<div class="section-title mb-4">
 						<h2 class="text-anm">Join Us During These Opening Time</h2>
 					</div>
 					<p class="mb-4" data-aos="fade-up" data-aos-duration="1000">
 						Join us during our opening hours for a memorable dining experience filled with delicious food, warm ambiance, and friendly service.
 					</p>
-					<div class="bistly-button" data-aos="fade-up" data-aos-duration="1200">
+					<div class="giovanni-button" data-aos="fade-up" data-aos-duration="1200">
 						<a href="#contact" class="theme-btn style-two">Contact Us</a>
 					</div>
 				</div>

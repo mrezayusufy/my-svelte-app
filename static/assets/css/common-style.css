@@ -1,8 +1,8 @@
 /*----------------------------------------------------------------------------------- 
 
-Template Name: Bistly - Restaurant & Cafe HTML Template
+Template Name: Giovanni - Restaurant & Cafe HTML Template
 URI: pixelfit.agency
-Description: Bistly is a clean, modern, and fully responsive HTML template designed specifically for restaurants, cafes, bakeries, coffee shops, and food-related businesses. Crafted with attention to detail and built using the latest web technologies, Bistly ensures an exceptional user experience on all devices.
+Description: Giovanni is a clean, modern, and fully responsive HTML template designed specifically for restaurants, cafes, bakeries, coffee shops, and food-related businesses. Crafted with attention to detail and built using the latest web technologies, Giovanni ensures an exceptional user experience on all devices.
 Author: Pixelfit
 Author URI: https://themeforest.net/user/pixelfit
 Version: 1.0 
@@ -416,12 +416,12 @@ label {
 }
 
 /* Pagination */
-.bistly-pagination ul li {
+.giovanni-pagination ul li {
   display: inline-block;
   margin-left: 5px;
   margin-right: 5px;
 }
-.bistly-pagination ul li a {
+.giovanni-pagination ul li a {
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -437,7 +437,7 @@ label {
   border: 1px solid var(--border-color);
   color: var(--heading-color);
 }
-.bistly-pagination ul li a:hover {
+.giovanni-pagination ul li a:hover {
   background-color: var(--primary-color);
   color: var(--white-color);
 }

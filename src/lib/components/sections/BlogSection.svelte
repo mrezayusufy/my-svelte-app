@@ -40,7 +40,7 @@
 		<div class="row justify-content-center pb-xl-4">
 			{#each blogPosts as post}
 				<div class="col-xl-4 col-md-6 col-sm-12">
-					<div class="bistly-blog-post mb-5" data-aos="fade-up" data-aos-duration={post.duration}>
+					<div class="giovanni-blog-post mb-5" data-aos="fade-up" data-aos-duration={post.duration}>
 						<div class="post-thumbnail">
 							<img src={post.image} alt={post.title} />
 						</div>

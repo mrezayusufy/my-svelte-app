@@ -10,7 +10,7 @@
 		},
 		{
 			quote:
-				'Bistly has become our favorite dining destination in town. The pasta is handmade daily, the wine pairings are inspired, and the atmosphere is wonderfully romantic.',
+				'Giovanni has become our favorite dining destination in town. The pasta is handmade daily, the wine pairings are inspired, and the atmosphere is wonderfully romantic.',
 			author: 'Elena Rostova / Food Critic',
 			rating: 5
 		},
@@ -31,14 +31,14 @@
 	}
 </script>
 
-<section class="rs-testimonial pb-5 pt-4">
+<section class="rs-testimonial pb-5 pt-6">
 	<div class="container">
 		<div class="row justify-content-center py-5">
 			<div class="col-xl-8 col-lg-10">
 				<div class="testimonial-slider position-relative">
 					{#each testimonials as item, idx}
 						{#if currentTestimonial === idx}
-							<div class="bistly-testimonial-item mb-4 text-center">
+							<div class="giovanni-testimonial-item mb-4 text-center">
 								<div class="testimonial-content">
 									<div class="ratings mb-3 text-warning">
 										{#each Array(item.rating) as _}

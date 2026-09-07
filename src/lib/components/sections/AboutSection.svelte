@@ -42,8 +42,8 @@
 		<div class="row py-5 my-xl-4">
 			<div class="col-lg-6">
 				<!-- Content Box Left -->
-				<div class="bistly-content-box mb-5 text-center text-lg-start">
-					<div class="bistly-image image-one mb-5 pb-5" data-aos="fade-up" data-aos-duration="1000">
+				<div class="giovanni-content-box mb-5 text-center text-lg-start">
+					<div class="giovanni-image image-one mb-5 pb-5" data-aos="fade-up" data-aos-duration="1000">
 						<img src={asset('/assets/images/home-restaurant/about/about-img1.jpg')} alt="Chef plating" />
 					</div>
 					<p class="mb-4" data-aos="fade-up" data-aos-duration="1200">
@@ -55,11 +55,11 @@
 
 			<div class="col-lg-6">
 				<!-- Content Box Right -->
-				<div class="bistly-content-box text-center text-lg-start">
+				<div class="giovanni-content-box text-center text-lg-start">
 					<h3 class="ps-lg-5 ms-xxl-5" data-aos="fade-up" data-aos-duration="1000">
 						Every dish is expertly crafted by our skilled chefs using freshest ingredients sourced from local farms
 					</h3>
-					<div class="bistly-image image-two pt-5 mt-5 float-lg-end" data-aos="fade-up" data-aos-duration="1200">
+					<div class="giovanni-image image-two pt-5 mt-5 float-lg-end" data-aos="fade-up" data-aos-duration="1200">
 						<img src={asset('/assets/images/home-restaurant/about/about-img2.jpg')} alt="Signature Italian dish" />
 					</div>
 				</div>

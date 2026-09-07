@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>Bistly - Restaurant & Cafe</title>
+	<title>Giovanni's Kaffeewelt - Restaurant & Cafe</title>
 	<!-- Favicon Icon -->
 	<link rel="shortcut icon" href={asset('/assets/images/favicon.png')} type="image/png" />
 	<!-- Google Fonts -->
@@ -17,7 +17,7 @@
 		rel="stylesheet"
 	/>
 	<!-- Flaticon css -->
-	<link rel="stylesheet" href={asset('/assets/fonts/flaticon/flaticon_bistly.css')} />
+	<link rel="stylesheet" href={asset('/assets/fonts/flaticon/flaticon_giovanni.css')} />
 	<!-- FontAwesome css -->
 	<link rel="stylesheet" href={asset('/assets/fonts/fontawesome/css/all.min.css')} />
 	<!-- Bootstrap css -->

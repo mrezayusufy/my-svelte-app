@@ -57,13 +57,13 @@
 					<p data-aos="fade-up" data-aos-duration="1000">
 						Classic Italian cuisine reimagined with modern flair, fresh ingredients, and bold flavors
 					</p>
-					<div class="bistly-button mb-3 pb-3 mb-lg-5 pb-lg-5" data-aos="fade-up" data-aos-duration="1200">
+					<div class="giovanni-button mb-3 pb-3 mb-lg-5 pb-lg-5" data-aos="fade-up" data-aos-duration="1200">
 						<a href="#reservation" class="theme-btn style-one">Make A Reservation</a>
 					</div>
 					<div class="row">
 						<div class="col-md-6">
 							<!-- Counter Experience -->
-							<div class="bistly-counter-item text-center mb-4" data-aos="fade-up" data-aos-duration="1300">
+							<div class="giovanni-counter-item text-center mb-4" data-aos="fade-up" data-aos-duration="1300">
 								<div class="content">
 									<h2 class="mb-4"><span class="counter">25</span>+</h2>
 									<p>Years of Experience</p>
@@ -72,7 +72,7 @@
 						</div>
 						<div class="col-md-6">
 							<!-- Counter Rating -->
-							<div class="bistly-counter-item text-center mb-4" data-aos="fade-up" data-aos-duration="1400">
+							<div class="giovanni-counter-item text-center mb-4" data-aos="fade-up" data-aos-duration="1400">
 								<div class="content">
 									<h2 class="mb-4">4.9<i class="fas fa-star ms-1"></i></h2>
 									<p>Average rating</p>

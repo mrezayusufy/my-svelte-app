@@ -10,16 +10,16 @@
 */
 
 @font-face {
-    font-family: "flaticon_bistly";
-    src: url("./flaticon_bistly.woff2?47055a51fea85d3a584ef73dd0596ad5") format("woff2"),
-url("./flaticon_bistly.woff?47055a51fea85d3a584ef73dd0596ad5") format("woff"),
-url("./flaticon_bistly.eot?47055a51fea85d3a584ef73dd0596ad5#iefix") format("embedded-opentype"),
-url("./flaticon_bistly.ttf?47055a51fea85d3a584ef73dd0596ad5") format("truetype"),
-url("./flaticon_bistly.svg?47055a51fea85d3a584ef73dd0596ad5#flaticon_bistly") format("svg")
+    font-family: "flaticon_giovanni";
+    src: url("./flaticon_giovanni.woff2?47055a51fea85d3a584ef73dd0596ad5") format("woff2"),
+url("./flaticon_giovanni.woff?47055a51fea85d3a584ef73dd0596ad5") format("woff"),
+url("./flaticon_giovanni.eot?47055a51fea85d3a584ef73dd0596ad5#iefix") format("embedded-opentype"),
+url("./flaticon_giovanni.ttf?47055a51fea85d3a584ef73dd0596ad5") format("truetype"),
+url("./flaticon_giovanni.svg?47055a51fea85d3a584ef73dd0596ad5#flaticon_giovanni") format("svg")
 }
 
 i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
-    font-family: flaticon_bistly !important;
+    font-family: flaticon_giovanni !important;
     font-style: normal;
     font-weight: normal !important;
     font-variant: normal;

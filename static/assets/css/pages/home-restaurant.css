@@ -1,8 +1,8 @@
 /*----------------------------------------------------------------------------------- 
 
-Template Name: Bistly - Restaurant & Cafe HTML Template
+Template Name: Giovanni - Restaurant & Cafe HTML Template
 URI: pixelfit.agency
-Description: Bistly is a clean, modern, and fully responsive HTML template designed specifically for restaurants, cafes, bakeries, coffee shops, and food-related businesses. Crafted with attention to detail and built using the latest web technologies, Bistly ensures an exceptional user experience on all devices.
+Description: Giovanni is a clean, modern, and fully responsive HTML template designed specifically for restaurants, cafes, bakeries, coffee shops, and food-related businesses. Crafted with attention to detail and built using the latest web technologies, Giovanni ensures an exceptional user experience on all devices.
 Author: Pixelfit
 Author URI: https://themeforest.net/user/pixelfit
 Version: 1.0 
@@ -100,17 +100,17 @@ Version: 1.0
   line-height: 35px;
   margin-bottom: 30px;
 }
-.hero-content .bistly-button .theme-btn.style-one:hover {
+.hero-content .giovanni-button .theme-btn.style-one:hover {
   background-color: var(--white-color);
   color: var(--primary-color);
 }
 
-.bistly-counter-item .content h2 {
+.giovanni-counter-item .content h2 {
   color: var(--white-color);
   font-size: 64px;
   line-height: 1;
 }
-.bistly-counter-item .content h2 i {
+.giovanni-counter-item .content h2 i {
   font-size: 24px;
   color: #FF9F1A;
   vertical-align: super;
@@ -158,7 +158,7 @@ Version: 1.0
     font-size: 42px;
   }
 }
-.rs-about .bistly-image.image-two img {
+.rs-about .giovanni-image.image-two img {
   border-radius: 200px 200px 0px 0px;
 }
 
@@ -187,56 +187,56 @@ Version: 1.0
   bottom: 180px;
   left: 110px;
 }
-.rs-enjoy-food .bistly-image-box.image-box-one {
+.rs-enjoy-food .giovanni-image-box.image-box-one {
   -webkit-margin-start: -80px;
           margin-inline-start: -80px;
 }
 @media screen and (max-width: 1199.98px) {
-  .rs-enjoy-food .bistly-image-box.image-box-one {
+  .rs-enjoy-food .giovanni-image-box.image-box-one {
     -webkit-margin-start: 0;
             margin-inline-start: 0;
   }
 }
-.rs-enjoy-food .bistly-image-box.image-box-two {
+.rs-enjoy-food .giovanni-image-box.image-box-two {
   -webkit-margin-end: -200px;
           margin-inline-end: -200px;
 }
 @media (max-width: 1650px) {
-  .rs-enjoy-food .bistly-image-box.image-box-two {
+  .rs-enjoy-food .giovanni-image-box.image-box-two {
     -webkit-margin-end: -120px;
             margin-inline-end: -120px;
   }
 }
 @media (max-width: 1399.98px) {
-  .rs-enjoy-food .bistly-image-box.image-box-two {
+  .rs-enjoy-food .giovanni-image-box.image-box-two {
     -webkit-margin-end: -90px;
             margin-inline-end: -90px;
   }
 }
 @media screen and (max-width: 1199.98px) {
-  .rs-enjoy-food .bistly-image-box.image-box-two {
+  .rs-enjoy-food .giovanni-image-box.image-box-two {
     -webkit-margin-end: 0;
             margin-inline-end: 0;
   }
 }
-.rs-enjoy-food .bistly-content-box {
+.rs-enjoy-food .giovanni-content-box {
   padding: 0 110px;
 }
 @media screen and (max-width: 991.98px) {
-  .rs-enjoy-food .bistly-content-box {
+  .rs-enjoy-food .giovanni-content-box {
     padding: 0 50px;
   }
 }
 @media (max-width: 767.98px) {
-  .rs-enjoy-food .bistly-content-box {
+  .rs-enjoy-food .giovanni-content-box {
     padding: 0;
   }
 }
-.rs-enjoy-food .bistly-content-box p {
+.rs-enjoy-food .giovanni-content-box p {
   font-size: 20px;
   line-height: 35px;
 }
-.rs-enjoy-food .bistly-content-box .theme-btn.style-one:hover {
+.rs-enjoy-food .giovanni-content-box .theme-btn.style-one:hover {
   background-color: var(--white-color);
   color: var(--primary-black-color);
 }
@@ -246,16 +246,16 @@ Version: 1.0
   background-color: #354B4A;
 }
 
-.bistly-food-item {
+.giovanni-food-item {
   position: relative;
   text-align: center;
   padding: 30px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.bistly-food-item:first-child {
+.giovanni-food-item:first-child {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
-.bistly-food-item .hover-image {
+.giovanni-food-item .hover-image {
   -webkit-transition: opacity 0.3s, 1, 0.32, 1, -webkit-transform 0.7scubic-bezier 0.23;
   transition: opacity 0.3s, 1, 0.32, 1, -webkit-transform 0.7scubic-bezier 0.23;
   transition: opacity 0.3s, transform 0.7scubic-bezier 0.23, 1, 0.32, 1;
@@ -275,32 +275,32 @@ Version: 1.0
   pointer-events: none;
 }
 @media screen and (max-width: 991.98px) {
-  .bistly-food-item .hover-image {
+  .giovanni-food-item .hover-image {
     display: none;
   }
 }
-.bistly-food-item .content h2 {
+.giovanni-food-item .content h2 {
   font-size: 120px;
   line-height: 1;
   color: rgba(255, 255, 255, 0.5);
 }
 @media (max-width: 767.98px) {
-  .bistly-food-item .content h2 {
+  .giovanni-food-item .content h2 {
     font-size: 60px;
   }
 }
-.bistly-food-item .content p {
+.giovanni-food-item .content p {
   color: rgba(255, 255, 255, 0.5);
   font-size: 24px;
   line-height: 35px;
 }
-.bistly-food-item:hover .content h2 {
+.giovanni-food-item:hover .content h2 {
   color: var(--white-color);
 }
-.bistly-food-item:hover .content p {
+.giovanni-food-item:hover .content p {
   color: var(--white-color);
 }
-.bistly-food-item:hover .hover-image {
+.giovanni-food-item:hover .hover-image {
   visibility: visible;
   opacity: 1;
 }
@@ -326,12 +326,12 @@ Version: 1.0
     margin-right: -12px;
   }
 }
-.gallery-slider .bistly-gallery-item {
+.gallery-slider .giovanni-gallery-item {
   margin-left: 15px;
   margin-right: 15px;
 }
 @media screen and (max-width: 991.98px) {
-  .gallery-slider .bistly-gallery-item {
+  .gallery-slider .giovanni-gallery-item {
     margin-left: 12px;
     margin-right: 12px;
   }
@@ -369,13 +369,13 @@ Version: 1.0
   }
 }
 
-.bistly-testimonial-item {
+.giovanni-testimonial-item {
   text-align: center;
 }
-.bistly-testimonial-item .testimonial-content .ratings i {
+.giovanni-testimonial-item .testimonial-content .ratings i {
   color: var(--rating-color);
 }
-.bistly-testimonial-item .testimonial-content p {
+.giovanni-testimonial-item .testimonial-content p {
   font-size: 32px;
   line-height: 50px;
   color: var(--white-color);
@@ -383,12 +383,12 @@ Version: 1.0
   margin-bottom: 25px;
 }
 @media (max-width: 767.98px) {
-  .bistly-testimonial-item .testimonial-content p {
+  .giovanni-testimonial-item .testimonial-content p {
     font-size: 20px;
     line-height: 30px;
   }
 }
-.bistly-testimonial-item .testimonial-content span {
+.giovanni-testimonial-item .testimonial-content span {
   color: var(--white-color);
 }
 
@@ -417,7 +417,7 @@ Version: 1.0
 .rs-time-sec {
   background-color: var(--primary-black-color);
 }
-.rs-time-sec .bistly-content-box p {
+.rs-time-sec .giovanni-content-box p {
   font-size: 20px;
   line-height: 32px;
   color: rgba(255, 255, 255, 0.8);
@@ -457,49 +457,49 @@ Version: 1.0
 }
 
 /* Blog Section */
-.bistly-blog-post .post-thumbnail img {
+.giovanni-blog-post .post-thumbnail img {
   width: 100%;
 }
-.bistly-blog-post .post-content {
+.giovanni-blog-post .post-content {
   padding-top: 25px;
 }
-.bistly-blog-post .post-content .post-meta span {
+.giovanni-blog-post .post-content .post-meta span {
   margin-bottom: 10px;
 }
-.bistly-blog-post .post-content .post-meta span:not(:last-child) {
+.giovanni-blog-post .post-content .post-meta span:not(:last-child) {
   -webkit-margin-end: 25px;
           margin-inline-end: 25px;
 }
-.bistly-blog-post .post-content .post-meta span i {
+.giovanni-blog-post .post-content .post-meta span i {
   -webkit-margin-end: 10px;
           margin-inline-end: 10px;
 }
-.bistly-blog-post .post-content h4 {
+.giovanni-blog-post .post-content h4 {
   margin-bottom: 25px;
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 25px;
 }
-.bistly-blog-post .post-content h4:hover {
+.giovanni-blog-post .post-content h4:hover {
   color: var(--primary-color);
 }
-.bistly-blog-post .post-content .read-more.style-one:hover {
+.giovanni-blog-post .post-content .read-more.style-one:hover {
   color: var(--primary-color);
 }
 
 /* Instagram Section */
-.bistly-instagram-item:hover .thumbnail .hover-content {
+.giovanni-instagram-item:hover .thumbnail .hover-content {
   visibility: visible;
   opacity: 1;
 }
-.bistly-instagram-item:hover .thumbnail .hover-content .icon {
+.giovanni-instagram-item:hover .thumbnail .hover-content .icon {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
-.bistly-instagram-item .thumbnail {
+.giovanni-instagram-item .thumbnail {
   position: relative;
   overflow: hidden;
 }
-.bistly-instagram-item .thumbnail .hover-content {
+.giovanni-instagram-item .thumbnail .hover-content {
   position: absolute;
   top: 0;
   left: 0;
@@ -520,7 +520,7 @@ Version: 1.0
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.bistly-instagram-item .thumbnail .hover-content .icon {
+.giovanni-instagram-item .thumbnail .hover-content .icon {
   color: var(--white-color);
   font-size: 20px;
   -webkit-transform: translateY(20px);

@@ -1,9 +1,9 @@
 
 /*----------------------------------------------------------------------------------- 
 
-Template Name: Bistly - Restaurant & Cafe HTML Template
+Template Name: Giovanni - Restaurant & Cafe HTML Template
 URI: pixelfit.agency
-Description: Bistly is a clean, modern, and fully responsive HTML template designed specifically for restaurants, cafes, bakeries, coffee shops, and food-related businesses. Crafted with attention to detail and built using the latest web technologies, Bistly ensures an exceptional user experience on all devices.
+Description: Giovanni is a clean, modern, and fully responsive HTML template designed specifically for restaurants, cafes, bakeries, coffee shops, and food-related businesses. Crafted with attention to detail and built using the latest web technologies, Giovanni ensures an exceptional user experience on all devices.
 Author: Pixelfit
 Author URI: https://themeforest.net/user/pixelfit
 Version: 1.0 

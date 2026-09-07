@@ -2,9 +2,9 @@
 
 /*----------------------------------------------------------------------------------- 
 
-Template Name: Bistly - Restaurant & Cafe HTML Template
+Template Name: Giovanni - Restaurant & Cafe HTML Template
 URI: pixelfit.agency
-Description: Bistly is a clean, modern, and fully responsive HTML template designed specifically for restaurants, cafes, bakeries, coffee shops, and food-related businesses. Crafted with attention to detail and built using the latest web technologies, Bistly ensures an exceptional user experience on all devices.
+Description: Giovanni is a clean, modern, and fully responsive HTML template designed specifically for restaurants, cafes, bakeries, coffee shops, and food-related businesses. Crafted with attention to detail and built using the latest web technologies, Giovanni ensures an exceptional user experience on all devices.
 Author: Pixelfit
 Author URI: https://themeforest.net/user/pixelfit
 Version: 1.0 
@@ -99,7 +99,7 @@ h2{
         line-height: 35px;
         margin-bottom: 30px;
     }
-    & .bistly-button{
+    & .giovanni-button{
         & .theme-btn{
             &.style-one{
                 &:hover{
@@ -111,7 +111,7 @@ h2{
     }
 }
 
-.bistly-counter-item{
+.giovanni-counter-item{
     & .content{
         & h2{
             color: $white-color;
@@ -166,7 +166,7 @@ h2{
             }
         }
     }
-    &  .bistly-image{
+    &  .giovanni-image{
         &.image-two{
             & img{
                 border-radius: 200px 200px 0px 0px;
@@ -202,7 +202,7 @@ h2{
             left: 110px;
         }
     }
-    & .bistly-image-box{
+    & .giovanni-image-box{
         &.image-box-one{
             margin-inline-start: -80px;
             @include respond(xl){
@@ -222,7 +222,7 @@ h2{
             }
         }
     }
-    & .bistly-content-box{
+    & .giovanni-content-box{
         padding: 0 110px;
         @include respond(lg){
             padding: 0 50px;
@@ -251,7 +251,7 @@ h2{
     background-color: #354B4A;
 }
 
-.bistly-food-item{
+.giovanni-food-item{
     position: relative;
     text-align: center;
     padding: 30px 0;
@@ -325,7 +325,7 @@ h2{
         margin-left: -12px;
         margin-right: -12px;
     }
-    & .bistly-gallery-item{
+    & .giovanni-gallery-item{
         margin-left: 15px;
         margin-right: 15px;
         @include respond(lg){
@@ -363,7 +363,7 @@ h2{
         }
     }
 }
-.bistly-testimonial-item{
+.giovanni-testimonial-item{
     text-align: center;
     & .testimonial-content{
         & .ratings{
@@ -429,7 +429,7 @@ h2{
 
 .rs-time-sec{
     background-color: $primary-black-color;
-    & .bistly-content-box{
+    & .giovanni-content-box{
         & p{
             font-size: 20px;
             line-height: 32px;
@@ -473,7 +473,7 @@ h2{
 
 /* Blog Section */ 
 
-.bistly-blog-post{
+.giovanni-blog-post{
     & .post-thumbnail{
         & img{
             width: 100%;
@@ -512,7 +512,7 @@ h2{
 
 /* Instagram Section */ 
 
-.bistly-instagram-item{
+.giovanni-instagram-item{
     &:hover{
         & .thumbnail{
             & .hover-content{

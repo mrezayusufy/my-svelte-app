@@ -180,13 +180,19 @@
 						class="gallery-slide-item"
 						style="flex: 0 0 {100 / visibleSlides}%; max-width: {100 / visibleSlides}%;"
 					>
-						<div class="bistly-gallery-item">
+						<div class="giovanni-gallery-item">
 							<div class="gallery-img">
 								<img
 									src={item.src}
 									alt={item.alt}
 									draggable="false"
 								/>
+								<div class="gallery-overlay">
+									<div class="overlay-content">
+										<span class="category">Romantic Gallery</span>
+										<h4 class="title">{item.title}</h4>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -263,11 +269,11 @@
 		box-sizing: border-box;
 	}
 
-	.bistly-gallery-item {
+	.giovanni-gallery-item {
 		width: 100%;
 	}
 
-	.bistly-gallery-item .gallery-img {
+	.giovanni-gallery-item .gallery-img {
 		position: relative;
 		overflow: hidden;
 		box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
@@ -276,12 +282,12 @@
 	}
 
 	@media (max-width: 767.98px) {
-		.bistly-gallery-item .gallery-img {
+		.giovanni-gallery-item .gallery-img {
 			height: 320px;
 		}
 	}
 
-	.bistly-gallery-item .gallery-img img {
+	.giovanni-gallery-item .gallery-img img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
@@ -290,7 +296,7 @@
 		pointer-events: none;
 	}
 
-	.bistly-gallery-item:hover .gallery-img img {
+	.giovanni-gallery-item:hover .gallery-img img {
 		transform: scale(1.08);
 	}
 
@@ -311,7 +317,7 @@
 		pointer-events: none;
 	}
 
-	.bistly-gallery-item:hover .gallery-overlay {
+	.giovanni-gallery-item:hover .gallery-overlay {
 		opacity: 1;
 	}
 

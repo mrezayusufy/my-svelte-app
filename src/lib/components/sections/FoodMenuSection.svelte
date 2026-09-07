@@ -58,7 +58,7 @@
 			<div class="col-lg-12">
 				{#each foodItems as item, idx}
 					<div
-						class="bistly-food-item position-relative"
+						class="giovanni-food-item position-relative"
 						data-aos="fade-down"
 						data-aos-duration={1000 + idx * 200}
 						onmouseenter={(e) => handleFoodEnter(idx, e)}
@@ -84,7 +84,7 @@
 
 		<div class="row pb-5">
 			<div class="col-lg-12">
-				<div class="bistly-button mb-xl-4 text-center" data-aos="fade-down" data-aos-duration="1600">
+				<div class="giovanni-button mb-xl-4 text-center" data-aos="fade-down" data-aos-duration="1600">
 					<a href="#menu" class="theme-btn style-two">View All Menu Item</a>
 				</div>
 			</div>

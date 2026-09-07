@@ -2,9 +2,9 @@
 
 /*----------------------------------------------------------------------------------- 
 
-Template Name: Bistly - Restaurant & Cafe HTML Template
+Template Name: Giovanni - Restaurant & Cafe HTML Template
 URI: pixelfit.agency
-Description: Bistly is a clean, modern, and fully responsive HTML template designed specifically for restaurants, cafes, bakeries, coffee shops, and food-related businesses. Crafted with attention to detail and built using the latest web technologies, Bistly ensures an exceptional user experience on all devices.
+Description: Giovanni is a clean, modern, and fully responsive HTML template designed specifically for restaurants, cafes, bakeries, coffee shops, and food-related businesses. Crafted with attention to detail and built using the latest web technologies, Giovanni ensures an exceptional user experience on all devices.
 Author: Pixelfit
 Author URI: https://themeforest.net/user/pixelfit
 Version: 1.0 
@@ -71,7 +71,7 @@ Version: 1.0
     }
 }
 
-.bistly-iconic-box{
+.giovanni-iconic-box{
     display: flex;
     align-items: center;
     & .icon{
@@ -98,8 +98,8 @@ Version: 1.0
 
 /* About Page CSS */
 
-.bistly-about-sec{
-    & .bistly-content-box{
+.giovanni-about-sec{
+    & .giovanni-content-box{
         padding-inline-end: 50px;
         @include respond(xl){
             padding-inline-end: 0;
@@ -132,14 +132,14 @@ Version: 1.0
             }
         }
     }
-    & .bistly-image{
+    & .giovanni-image{
         & img{
             border-radius: 400px 400px 0px 0px;
         }
     }
 }
 
-.bistly-fun-fact{
+.giovanni-fun-fact{
     & .counter-item-wrapper{
         & .counter-item-border{
             &:not(:last-child){
@@ -155,7 +155,7 @@ Version: 1.0
     }
 }
 
-.bistly-counter-item{
+.giovanni-counter-item{
     & .icon{
         color: $primary-color;
         font-size: 55px;
@@ -168,10 +168,10 @@ Version: 1.0
     }
 }
 
-.bistly-features-sec{
+.giovanni-features-sec{
     background-color: $primary-black-color;
-    & .bistly-content-box{
-        & .bistly-button{
+    & .giovanni-content-box{
+        & .giovanni-button{
             & .theme-btn{
                 &.style-one{
                     &:hover{
@@ -182,14 +182,14 @@ Version: 1.0
             }
         }
     }
-    & .bistly-image{
+    & .giovanni-image{
         & img{
             border-radius: 400px 400px 0px 0px;
         }
     }
 }
 
-.bistly-intro-sec{
+.giovanni-intro-sec{
     &:after{
         position: absolute;
         top: 0;
@@ -200,7 +200,7 @@ Version: 1.0
         z-index: -1;
         background-color: rgba(0, 0, 0, 0.70);
     }
-    & .bistly-content-box{
+    & .giovanni-content-box{
         & .video-popup{
             width: 110px;
             height: 110px;
@@ -247,7 +247,7 @@ Version: 1.0
     }
 }
 
-.bistly-testimonial-item{
+.giovanni-testimonial-item{
     text-align: center;
     & .testimonial-content{
         & .ratings{
@@ -274,7 +274,7 @@ Version: 1.0
 }
 
 
-.bistly-blog-post{
+.giovanni-blog-post{
     & .post-content{
         padding-top: 25px;
         & .post-meta{
@@ -306,7 +306,7 @@ Version: 1.0
     }
 }
 
-.bistly-instagram-item{
+.giovanni-instagram-item{
     &:hover{
         & .thumbnail{
             & .hover-content{
@@ -359,7 +359,7 @@ Version: 1.0
     }
 }
 
-.bistly-product-item{
+.giovanni-product-item{
     &:hover{
         & .product-thumbnail{
             & img{
@@ -450,7 +450,7 @@ Version: 1.0
 /* Menu List Page CSS */ 
 
 
-.bistly-menu-list-item{
+.giovanni-menu-list-item{
     display: flex;
     align-items: center;
     width: 100%;
@@ -508,7 +508,7 @@ Version: 1.0
 
 /* Shop Page CSS */ 
 
-.bistly-shop-sec{
+.giovanni-shop-sec{
     & .product-search{
         & .form-group{
             max-width: 300px;
@@ -535,7 +535,7 @@ Version: 1.0
 /* Shop Details Page CSS */ 
 
 
-.bistly-shop-details-sec{
+.giovanni-shop-details-sec{
     & .shop-details-wrapper{
         & .product-thumb-slider{
             margin-left: -8px;
@@ -695,7 +695,7 @@ Version: 1.0
     @include respond(xl){
         padding-top: 60px;
     }
-    & .bistly-tabs{
+    & .giovanni-tabs{
         & .nav-tabs{
             border-bottom: none;
         }
@@ -728,13 +728,13 @@ Version: 1.0
         }
     }
 }
-.bistly-review-area{
+.giovanni-review-area{
     background-color: #F3F5F5;
     padding: 30px;
     @include respond(md){
         padding: 30px 15px;
     }
-    & .bistly-reviews-list{
+    & .giovanni-reviews-list{
         & .review-item{
             display: flex;
             align-items: flex-start;
@@ -781,7 +781,7 @@ Version: 1.0
     }
 }
 
-.bistly-form-area{
+.giovanni-form-area{
     & h3{
         margin-bottom: 20px;
     }
@@ -980,7 +980,7 @@ Version: 1.0
 
 /* Checkout Page CSS */ 
 
-.bistly-billing-wrapper{
+.giovanni-billing-wrapper{
     padding-right: 50px;
     & .billing-wrapper{
         & form{
@@ -1157,13 +1157,13 @@ Version: 1.0
 
 /* Gallery Page CSS */ 
 
-.bistly-gallery-sec{
+.giovanni-gallery-sec{
     & .container-fluid{
         padding-left: 30px;
         padding-right: 30px;
     }
 }
-.bistly-gallery-item{
+.giovanni-gallery-item{
     & .gallery-img{
         & img{
             width: 100%;
@@ -1173,7 +1173,7 @@ Version: 1.0
 
 /* Blog Page CSS */ 
 
-.bistly-blog-sec{
+.giovanni-blog-sec{
     & .text-box{
         & p{
             font-size: 20px;
@@ -1239,12 +1239,12 @@ Version: 1.0
                     margin-bottom: 30px;
                 }
             }
-            & .bistly-image{
+            & .giovanni-image{
                 & img{
                     border-radius: 310px 310px 0 0;
                 }
             }
-            & .bistly-content-box{
+            & .giovanni-content-box{
                 padding-left: 100px;
                 @include respond(xxxl){
                     padding-left: 50px;
@@ -1306,7 +1306,7 @@ Version: 1.0
     }
 }
 
-.bistly-iconic-box-two{
+.giovanni-iconic-box-two{
     display: flex;
     align-items: center;
     & .icon{
@@ -1445,9 +1445,9 @@ Version: 1.0
 }
 
 
-.bistly-contact-sec{
-    & .bistly-content-box{
-        & .bistly-opening-time{
+.giovanni-contact-sec{
+    & .giovanni-content-box{
+        & .giovanni-opening-time{
             margin-top: 35px;
             padding-top: 30px;
             border-top: 1px solid $border-color;
@@ -1455,7 +1455,7 @@ Version: 1.0
     }
 }
 
-.bistly-open-box{
+.giovanni-open-box{
     &  .content{
         & h4{
             margin-bottom: 13px;

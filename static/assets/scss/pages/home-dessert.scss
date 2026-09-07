@@ -1,9 +1,9 @@
 
 /*----------------------------------------------------------------------------------- 
 
-Template Name: Bistly - Restaurant & Cafe HTML Template
+Template Name: Giovanni - Restaurant & Cafe HTML Template
 URI: pixelfit.agency
-Description: Bistly is a clean, modern, and fully responsive HTML template designed specifically for restaurants, cafes, bakeries, coffee shops, and food-related businesses. Crafted with attention to detail and built using the latest web technologies, Bistly ensures an exceptional user experience on all devices.
+Description: Giovanni is a clean, modern, and fully responsive HTML template designed specifically for restaurants, cafes, bakeries, coffee shops, and food-related businesses. Crafted with attention to detail and built using the latest web technologies, Giovanni ensures an exceptional user experience on all devices.
 Author: Pixelfit
 Author URI: https://themeforest.net/user/pixelfit
 Version: 1.0 
@@ -172,7 +172,7 @@ Version: 1.0
             }
         }
     }
-    & .bistly-author-box{
+    & .giovanni-author-box{
         margin-inline-start: auto;
         @include respond(lg){
             margin-inline-start: inherit;
@@ -180,7 +180,7 @@ Version: 1.0
         }
     }
 }
-.bistly-author-box{
+.giovanni-author-box{
     background-color: $primary-color;
     max-width: 380px;
     padding: 30px 30px 10px;
@@ -220,7 +220,7 @@ Version: 1.0
     @include respond(xl){
         justify-content: center;
     }
-    & .bistly-category-item{
+    & .giovanni-category-item{
         max-width: 240px;
         @include respond(xxxl){
             max-width: 220px;
@@ -228,7 +228,7 @@ Version: 1.0
     }
 }
 
-.bistly-category-item{
+.giovanni-category-item{
     display: flex;
     align-items: center;
     padding: 10px;
@@ -303,7 +303,7 @@ Version: 1.0
             }
         }
     }
-    & .bistly-about-box{
+    & .giovanni-about-box{
         position: relative;
         z-index: 1;
         overflow: hidden;
@@ -343,7 +343,7 @@ Version: 1.0
             padding: 40px 30px;
         }
     }
-    & .bistly-experience-box{
+    & .giovanni-experience-box{
         padding: 40px 50px;
         background-color: #E3C7F2;
         & .content{
@@ -374,7 +374,7 @@ Version: 1.0
 
 /* Promo Section CSS */ 
 
-.bistly-promo-item{
+.giovanni-promo-item{
     padding: 165px 30px;
     border-radius: 20px;
     @include respond(xl){
@@ -418,7 +418,7 @@ Version: 1.0
     }
 }
 
-.bistly-choose-item{
+.giovanni-choose-item{
     background-color: $white-color;
     border-radius: 30px;
     border: 1px solid rgba(0, 0, 0, 0.10);
@@ -462,7 +462,7 @@ Version: 1.0
         margin-right: 15px;
     }
 }
-.bistly-product-item{
+.giovanni-product-item{
     background-color: $white-color;
     padding: 10px;
     border-radius: 10px;
@@ -542,7 +542,7 @@ Version: 1.0
 /* Offer Section */ 
 
 .ds-offer-sec{
-    & .bistly-image-box{
+    & .giovanni-image-box{
         position: relative;
         & .shape{
             position: absolute;
@@ -607,7 +607,7 @@ Version: 1.0
         }
     }
 }
-.bistly-testimonial-item{
+.giovanni-testimonial-item{
     text-align: center;
     & .testimonial-content{
         & p{
@@ -641,7 +641,7 @@ Version: 1.0
     }
 }
 
-.bistly-gallery-item{
+.giovanni-gallery-item{
     & .gallery-img{
         & img{
             border-radius: 10px;
@@ -717,7 +717,7 @@ Version: 1.0
 
 /* Blog Section CSS */ 
 
-.bistly-blog-post{
+.giovanni-blog-post{
     & .post-thumbnail{
         & img{
             width: 100%;

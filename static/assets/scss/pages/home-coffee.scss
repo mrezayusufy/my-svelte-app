@@ -2,9 +2,9 @@
 
 /*----------------------------------------------------------------------------------- 
 
-Template Name: Bistly - Restaurant & Cafe HTML Template
+Template Name: Giovanni - Restaurant & Cafe HTML Template
 URI: pixelfit.agency
-Description: Bistly is a clean, modern, and fully responsive HTML template designed specifically for restaurants, cafes, bakeries, coffee shops, and food-related businesses. Crafted with attention to detail and built using the latest web technologies, Bistly ensures an exceptional user experience on all devices.
+Description: Giovanni is a clean, modern, and fully responsive HTML template designed specifically for restaurants, cafes, bakeries, coffee shops, and food-related businesses. Crafted with attention to detail and built using the latest web technologies, Giovanni ensures an exceptional user experience on all devices.
 Author: Pixelfit
 Author URI: https://themeforest.net/user/pixelfit
 Version: 1.0 
@@ -183,7 +183,7 @@ Version: 1.0
 /* About Section */ 
 
 .cs-about-sec{
-    & .bistly-content-box{
+    & .giovanni-content-box{
         & h2{
             margin-bottom: 25px;
             @include respond(xl){
@@ -224,7 +224,7 @@ Version: 1.0
 .cs-enjoy-coffee{
     background-color: $primary-black-color;
     padding: 0 30px;
-    & .bistly-image{
+    & .giovanni-image{
         position: absolute;
         z-index: -1;
         & img{
@@ -259,7 +259,7 @@ Version: 1.0
             }
         }
     }
-    & .bistly-content-box{
+    & .giovanni-content-box{
         & .section-title{
             & h2{
             color: $white-color;
@@ -282,7 +282,7 @@ Version: 1.0
         }
     }
 }
-.bistly-popular-item{
+.giovanni-popular-item{
     display: flex;
     .icon{
         margin-inline-end: 30px;
@@ -301,7 +301,7 @@ Version: 1.0
 
 /* Menu Section CSS */ 
 
-.bistly-menu-sec{
+.giovanni-menu-sec{
     & .menu-image-wrap{
         position: absolute;
         top: 0;
@@ -345,7 +345,7 @@ Version: 1.0
         }
     }
 }
-.bistly-menu-item{
+.giovanni-menu-item{
     display: flex;
     align-items: flex-start;
     padding: 20px 25px;
@@ -436,7 +436,7 @@ Version: 1.0
 
 .cs-time-sec{
     background-color: $primary-black-color;
-    & .bistly-content-box{
+    & .giovanni-content-box{
         & p{
             font-size: 20px;
             line-height: 32px;
@@ -482,7 +482,7 @@ Version: 1.0
 
 /* Blog Section CSS */ 
 
-.bistly-blog-post{
+.giovanni-blog-post{
     & .post-thumbnail{
         & img{
             width: 100%;
