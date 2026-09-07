@@ -36,7 +36,7 @@
 	<div class="shape shape-two">
 		<span><img src={asset('/assets/images/home-restaurant/about/shape2.png')} alt="Decorative botanical shape" /></span>
 	</div>
-	<div class="big-text text-anm">A Culinary <br /> Journey</div>
+	<div class="big-text text-anm text-center text-lg-end">A Culinary <br /> Journey</div>
 
 	<div class="container">
 		<div class="row py-5 my-xl-4">
@@ -49,10 +49,7 @@
 					<p class="mb-4" data-aos="fade-up" data-aos-duration="1200">
 						Embark on a culinary journey where tradition meets innovation. Our dishes are thoughtfully crafted with the finest ingredients, celebrating flavors from Italy and beyond. Each bite tells a story.
 					</p>
-					<div class="author-sign" data-aos="fade-up" data-aos-duration="1400">
-						<img src={asset('/assets/images/home-restaurant/about/sign.png')} alt="Signature" />
-						<h5 class="mt-3">CEO & Founder</h5>
-					</div>
+					 
 				</div>
 			</div>
 
@@ -62,7 +59,7 @@
 					<h3 class="ps-lg-5 ms-xxl-5" data-aos="fade-up" data-aos-duration="1000">
 						Every dish is expertly crafted by our skilled chefs using freshest ingredients sourced from local farms
 					</h3>
-					<div class="bistly-image image-two pt-5 mt-5 text-center text-lg-end" data-aos="fade-up" data-aos-duration="1200">
+					<div class="bistly-image image-two pt-5 mt-5 float-lg-end" data-aos="fade-up" data-aos-duration="1200">
 						<img src={asset('/assets/images/home-restaurant/about/about-img2.jpg')} alt="Signature Italian dish" />
 					</div>
 				</div>

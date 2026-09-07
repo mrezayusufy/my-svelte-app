@@ -52,12 +52,7 @@
 		<div class="row justify-content-center">
 			<div class="col-lg-6">
 				<!-- Hero Content -->
-				<div class="hero-content text-center">
-					<img
-						src={asset('/assets/images/home-restaurant/hero/sub.png')}
-						class="sub-head"
-						alt="Decorative Subheading"
-					/>
+				<div class="hero-content text-center"> 
 					<h1 class="text-anm">Classic Italian Redefined</h1>
 					<p data-aos="fade-up" data-aos-duration="1000">
 						Classic Italian cuisine reimagined with modern flair, fresh ingredients, and bold flavors
