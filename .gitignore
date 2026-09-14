@@ -24,3 +24,8 @@ vite.config.ts.timestamp-*
 
 .dev.vars*
 !.dev.vars.example
+
+# Agent
+.agents/
+skills-lock.json
+

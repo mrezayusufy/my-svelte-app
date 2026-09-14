@@ -41,7 +41,7 @@
 	style="background-image: url('{asset('/assets/images/home-restaurant/hero/hero-bg.jpg')}');"
 >
 	<!-- Hero Arch Images -->
-	<div class="hero-image image_one">
+	<div class="hero-image image_one ">
 		<img src={asset('/assets/images/home-restaurant/hero/hero-img1.jpg')} alt="Italian Dish" />
 	</div>
 	<div class="hero-image image_two">
@@ -53,12 +53,12 @@
 			<div class="col-lg-6">
 				<!-- Hero Content -->
 				<div class="hero-content text-center"> 
-					<h1 class="text-anm">Classic Italian Redefined</h1>
+					<h1 class="text-anm">Wo Kaffee zur Leidenschaft wird</h1>
 					<p data-aos="fade-up" data-aos-duration="1000">
-						Classic Italian cuisine reimagined with modern flair, fresh ingredients, and bold flavors
+						Erleben Sie handverlesene Kaffeespezialitäten, leidenschaftlich zubereitet mit erlesenen Bohnen und einem Hauch italienischer Eleganz
 					</p>
 					<div class="giovanni-button mb-3 pb-3 mb-lg-5 pb-lg-5" data-aos="fade-up" data-aos-duration="1200">
-						<a href="#reservation" class="theme-btn style-one">Make A Reservation</a>
+						<a href="#reservation" class="theme-btn style-one">Tisch reservieren</a>
 					</div>
 					<div class="row">
 						<div class="col-md-6">
@@ -66,7 +66,7 @@
 							<div class="giovanni-counter-item text-center mb-4" data-aos="fade-up" data-aos-duration="1300">
 								<div class="content">
 									<h2 class="mb-4"><span class="counter">25</span>+</h2>
-									<p>Years of Experience</p>
+									<p>Jahre Erfahrung</p>
 								</div>
 							</div>
 						</div>
@@ -75,7 +75,7 @@
 							<div class="giovanni-counter-item text-center mb-4" data-aos="fade-up" data-aos-duration="1400">
 								<div class="content">
 									<h2 class="mb-4">4.9<i class="fas fa-star ms-1"></i></h2>
-									<p>Average rating</p>
+									<p>Durchschnittliche Bewertung</p>
 								</div>
 							</div>
 						</div>

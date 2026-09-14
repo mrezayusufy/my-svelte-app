@@ -18,6 +18,9 @@
 		BlogSection,
 		Footer
 	} from '$lib/components';
+	import type { PageData } from './$types';
+
+	let { data }: { data: PageData } = $props();
 
 	onMount(() => {
 		// Initialize AOS for scroll animations
@@ -66,7 +69,7 @@
 			<EnjoyFoodSection />
 
 			<!-- Food Menu Section -->
-			<FoodMenuSection />
+			<FoodMenuSection categories={data.categories} menuItems={data.menu} />
 
 			<!-- Gallery Section -->
 			<GallerySection />

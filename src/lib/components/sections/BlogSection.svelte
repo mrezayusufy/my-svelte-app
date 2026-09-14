@@ -6,7 +6,7 @@
 			title: 'Easy Summer Dishes to Keep You Cool & Full',
 			author: 'John',
 			date: 'May 19, 2025',
-			image: asset('/blog-img1.jpg'),
+			image: asset('/assets/blog-img1.jpg'),
 			duration: 1000
 		},
 		{
