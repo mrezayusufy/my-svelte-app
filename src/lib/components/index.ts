@@ -7,7 +7,8 @@ export { default as EnjoyFoodSection } from './sections/EnjoyFoodSection.svelte'
 export { default as FoodMenuSection } from './sections/FoodMenuSection.svelte';
 export { default as GallerySection } from './sections/GallerySection.svelte';
 export { default as TestimonialSection } from './sections/TestimonialSection.svelte';
-export { default as ChefsSection } from './sections/ChefsSection.svelte';
+export { default as TeamSection } from './sections/TeamSection.svelte';
+export { default as ChefsSection } from './sections/TeamSection.svelte';
 export { default as BookingSection } from './sections/BookingSection.svelte';
 export { default as OpeningTimeSection } from './sections/OpeningTimeSection.svelte';
 export { default as BlogSection } from './sections/BlogSection.svelte';

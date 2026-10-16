@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { asset } from '$app/paths';
 	import { gsap } from 'gsap';
+	const {data} = $props();
 
 	let sectionEl = $state<HTMLElement>();
 
@@ -42,10 +43,10 @@
 >
 	<!-- Hero Arch Images -->
 	<div class="hero-image image_one ">
-		<img src={asset('/assets/images/home-restaurant/hero/hero-img1.jpg')} alt="Italian Dish" />
+		<img src={data.section_images[0].image_path} alt="Italian Dish" />
 	</div>
 	<div class="hero-image image_two">
-		<img src={asset('/assets/images/home-restaurant/hero/hero-img2.jpg')} alt="Artisan Pasta" />
+		<img src={data.section_images[1].image_path} alt="Artisan Pasta" />
 	</div>
 
 	<div class="container">
@@ -53,9 +54,9 @@
 			<div class="col-lg-6">
 				<!-- Hero Content -->
 				<div class="hero-content text-center"> 
-					<h1 class="text-anm">Wo Kaffee zur Leidenschaft wird</h1>
+					<h1 class="text-anm">{data.title}</h1>
 					<p data-aos="fade-up" data-aos-duration="1000">
-						Erleben Sie handverlesene Kaffeespezialitäten, leidenschaftlich zubereitet mit erlesenen Bohnen und einem Hauch italienischer Eleganz
+						{data.content}
 					</p>
 					<div class="giovanni-button mb-3 pb-3 mb-lg-5 pb-lg-5" data-aos="fade-up" data-aos-duration="1200">
 						<a href="#reservation" class="theme-btn style-one">Tisch reservieren</a>

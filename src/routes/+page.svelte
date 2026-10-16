@@ -12,7 +12,7 @@
 		FoodMenuSection,
 		GallerySection,
 		TestimonialSection,
-		ChefsSection,
+		TeamSection,
 		BookingSection,
 		OpeningTimeSection,
 		BlogSection,
@@ -60,28 +60,28 @@
 	<div id="smooth-content">
 		<main>
 			<!-- Hero Section -->
-			<HeroSection />
+			<HeroSection data={data.sections['hero']} />
 
 			<!-- About Section -->
-			<AboutSection />
+			<AboutSection data={data.sections['about']} />
 
 			<!-- Enjoy Food Feature Section -->
-			<EnjoyFoodSection />
+			<EnjoyFoodSection data={data.sections['feature']}/>
 
 			<!-- Food Menu Section -->
 			<FoodMenuSection categories={data.categories} menuItems={data.menu} />
 
 			<!-- Gallery Section -->
-			<GallerySection />
+			<GallerySection data={data.sections['fruhstuckszeit']}/>
 
 			<!-- Testimonial Section -->
 			<TestimonialSection />
 
-			<!-- Chefs Section -->
-			<ChefsSection />
+			<!-- Team Section -->
+			<TeamSection data={data.sections['unser-team']}/>
 
 			<!-- Booking Table Banner -->
-			<BookingSection />
+			<BookingSection data={data.sections['tischreservierung']}/>
 
 			<!-- Opening Times & Location Map -->
 			<OpeningTimeSection />

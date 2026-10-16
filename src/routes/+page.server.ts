@@ -1,16 +1,31 @@
 import { supabase } from '$lib/supabaseClient';
 import type { PageServerLoad } from './$types';
-import { defaultCategories, defaultMenuItems } from '$lib/data/menuData';
-import type { CategoryMenu, MenuItem } from '$lib/types/menu';
+import type { CategoryMenu, MenuItem, SectionItem } from '$lib/types/menu';
 
 export const load: PageServerLoad = async () => {
 	let categories: CategoryMenu[] = [];
 	let menu: MenuItem[] = [];
-
+	let section: SectionItem[] = [];
+ 
 	try {
-		const [categoriesResult, menuResult] = await Promise.all([
+		const [categoriesResult, menuResult, sectionResult] = await Promise.all([
 			supabase.from('category_menu').select('*').order('id', { ascending: true }),
-			supabase.from('menu').select('*').order('id', { ascending: true })
+			supabase.from('menu').select('*').order('id', { ascending: true }),
+			supabase.from("sections")
+			.select(`
+				id,
+				slug,
+				title,
+				subtitle,
+				content,
+				section_images (
+					id,
+					image_path,
+					alt_text,
+					sort_order
+				)
+			`)
+			.eq("is_active", true)
 		]);
 
 		if (categoriesResult.data && categoriesResult.data.length > 0) {
@@ -19,12 +34,21 @@ export const load: PageServerLoad = async () => {
 		if (menuResult.data && menuResult.data.length > 0) {
 			menu = menuResult.data as MenuItem[];
 		}
+		if (sectionResult.data && sectionResult.data.length > 0) {
+			section = sectionResult.data as SectionItem[];
+		}
 	} catch (err) {
 		console.error('Error fetching menu data from Supabase:', err);
-	}
-	console.log("menu",menu)
+	} 
+	const sections = Object.fromEntries(
+  section.map((s) => [
+    s.slug,
+    s,
+  ])
+);
 	return {
-		categories: categories.length > 0 ? categories : defaultCategories,
-		menu: menu.length > 0 ? menu : defaultMenuItems
+		categories: categories.length > 0 ? categories : [],
+		menu: menu.length > 0 ? menu : [],
+		sections: sections,
 	};
 };

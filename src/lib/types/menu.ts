@@ -16,3 +16,16 @@ export interface MenuItem {
 	photo?: string | null;
 	created_at?: string;
 }
+export interface SectionItem {
+	id: number;
+  slug: string;
+  title: string;
+  subtitle: string | null;
+  content: string | null;
+  section_images: {
+    id: number;
+    image_path: string;
+    alt_text: string | null;
+    sort_order: number;
+  }[];
+}

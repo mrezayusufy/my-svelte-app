@@ -5,7 +5,7 @@
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 	let sectionEl = $state<HTMLElement>();
-
+	let {data} = $props()
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
 
@@ -36,7 +36,7 @@
 	<div class="shape shape-two">
 		<span><img src={asset('/assets/images/home-restaurant/about/shape2.png')} alt="Decorative botanical shape" /></span>
 	</div>
-	<div class="big-text text-anm text-center text-lg-end">A Culinary <br /> Journey</div>
+	<div class="big-text text-anm text-center text-lg-end">{@html data.title}</div>
 
 	<div class="container">
 		<div class="row py-5 my-xl-4">
@@ -44,10 +44,10 @@
 				<!-- Content Box Left -->
 				<div class="giovanni-content-box mb-5 text-center text-lg-start">
 					<div class="giovanni-image image-one mb-5 pb-5" data-aos="fade-up" data-aos-duration="1000">
-						<img src={asset('/assets/images/home-restaurant/about/about-img1.jpg')} alt="Chef plating" />
+						<img src={data.section_images[0].image_path} alt={data.section_images[0].alt_text} />
 					</div>
 					<p class="mb-4" data-aos="fade-up" data-aos-duration="1200">
-						Embark on a culinary journey where tradition meets innovation. Our dishes are thoughtfully crafted with the finest ingredients, celebrating flavors from Italy and beyond. Each bite tells a story.
+						{data.content}
 					</p>
 					 
 				</div>
@@ -57,13 +57,19 @@
 				<!-- Content Box Right -->
 				<div class="giovanni-content-box text-center text-lg-start">
 					<h3 class="ps-lg-5 ms-xxl-5" data-aos="fade-up" data-aos-duration="1000">
-						Every dish is expertly crafted by our skilled chefs using freshest ingredients sourced from local farms
+						{data.subtitle}
 					</h3>
 					<div class="giovanni-image image-two pt-5 mt-5 float-lg-end" data-aos="fade-up" data-aos-duration="1200">
-						<img src={asset('/assets/images/home-restaurant/about/about-img2.jpg')} alt="Signature Italian dish" />
+						<img src={data.section_images[1].image_path} alt={data.section_images[1].alt_text} />
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
+<style>
+	.image-two {
+		max-width: 410px;
+		max-height: 500px;
+	}
+</style>
