@@ -66,7 +66,7 @@
 				<ul class="sub-menu" style="display: {activeSubMenu === 'pages' || !mobileMenuOpen ? '' : 'none'};">
 					<li><a href={resolve('/uber-uns')} onclick={closeMenu}>Über uns</a></li>
 					<li><a href="{resolve('/')}#opening-time" onclick={closeMenu}>Öffnungszeiten</a></li>
-					<li><a href="{resolve('/')}#blog" onclick={closeMenu}>Aktuelles</a></li>
+					<li><a href={resolve('/blog')} onclick={closeMenu}>Blog & Aktuelles</a></li>
 					<li><a href={resolve('/404')} onclick={closeMenu}>404 Seite</a></li>
 					<li><a href={resolve('/contact')} onclick={closeMenu}>Kontakt</a></li>
 				</ul>

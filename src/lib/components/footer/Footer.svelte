@@ -44,7 +44,7 @@
 							<ul>
 								<li><a href={resolve('/uber-uns')}>Über uns</a></li>
 								<li><a href="{resolve('/')}#menu">Speisekarte</a></li>
-								<li><a href="{resolve('/')}#blog">Aktuelles</a></li>
+								<li><a href={resolve('/blog')}>Blog & Aktuelles</a></li>
 								<li><a href={resolve('/404')}>404 Seite</a></li>
 								<li><a href={resolve('/contact')}>Kontakt</a></li>
 							</ul>
