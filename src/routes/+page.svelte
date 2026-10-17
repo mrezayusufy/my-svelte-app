@@ -73,9 +73,6 @@
 			<!-- Testimonial Section -->
 			<TestimonialSection />
 
-			<!-- Team Section -->
-			<TeamSection data={data.sections['unser-team']}/>
-
 			<!-- Booking Table Banner -->
 			<BookingSection data={data.sections['tischreservierung']}/>
 
