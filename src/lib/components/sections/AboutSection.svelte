@@ -3,6 +3,7 @@
 	import { asset } from '$app/paths';
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	import { aosAction } from '$lib/actions/aos';
 
 	let sectionEl = $state<HTMLElement>();
 	let {data} = $props()
@@ -43,10 +44,10 @@
 			<div class="col-lg-6">
 				<!-- Content Box Left -->
 				<div class="giovanni-content-box mb-5 text-center text-lg-start">
-					<div class="giovanni-image image-one mb-5 pb-5" data-aos="fade-up" data-aos-duration="1000">
+					<div class="giovanni-image image-one mb-5 pb-5" data-aos="fade-up" data-aos-duration="1000" use:aosAction>
 						<img src={data.section_images[0].image_path} alt={data.section_images[0].alt_text} />
 					</div>
-					<p class="mb-4" data-aos="fade-up" data-aos-duration="1200">
+					<p class="mb-4" data-aos="fade-up" data-aos-duration="1200" use:aosAction>
 						{data.content}
 					</p>
 					 
@@ -56,10 +57,10 @@
 			<div class="col-lg-6">
 				<!-- Content Box Right -->
 				<div class="giovanni-content-box text-center text-lg-start">
-					<h3 class="ps-lg-5 ms-xxl-5" data-aos="fade-up" data-aos-duration="1000">
+					<h3 class="ps-lg-5 ms-xxl-5" data-aos="fade-up" data-aos-duration="1000" use:aosAction>
 						{data.subtitle}
 					</h3>
-					<div class="giovanni-image image-two pt-5 mt-5 float-lg-end" data-aos="fade-up" data-aos-duration="1200">
+					<div class="giovanni-image image-two pt-5 mt-5 float-lg-end" data-aos="fade-up" data-aos-duration="1200" use:aosAction>
 						<img src={data.section_images[1].image_path} alt={data.section_images[1].alt_text} />
 					</div>
 				</div>

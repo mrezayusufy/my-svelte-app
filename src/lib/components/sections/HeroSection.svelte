@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { asset } from '$app/paths';
 	import { gsap } from 'gsap';
+	import { aosAction } from '$lib/actions/aos';
 	const {data} = $props();
 
 	let sectionEl = $state<HTMLElement>();
@@ -55,16 +56,16 @@
 				<!-- Hero Content -->
 				<div class="hero-content text-center"> 
 					<h1 class="text-anm">{data.title}</h1>
-					<p data-aos="fade-up" data-aos-duration="1000">
+					<p data-aos="fade-up" data-aos-duration="1000" use:aosAction>
 						{data.content}
 					</p>
-					<div class="giovanni-button mb-3 pb-3 mb-lg-5 pb-lg-5" data-aos="fade-up" data-aos-duration="1200">
+					<div class="giovanni-button mb-3 pb-3 mb-lg-5 pb-lg-5" data-aos="fade-up" data-aos-duration="1200" use:aosAction>
 						<a href="#reservation" class="theme-btn style-one">Tisch reservieren</a>
 					</div>
 					<div class="row">
 						<div class="col-md-6">
 							<!-- Counter Experience -->
-							<div class="giovanni-counter-item text-center mb-4" data-aos="fade-up" data-aos-duration="1300">
+							<div class="giovanni-counter-item text-center mb-4" data-aos="fade-up" data-aos-duration="1300" use:aosAction>
 								<div class="content">
 									<h2 class="mb-4"><span class="counter">25</span>+</h2>
 									<p>Jahre Erfahrung</p>
@@ -73,7 +74,7 @@
 						</div>
 						<div class="col-md-6">
 							<!-- Counter Rating -->
-							<div class="giovanni-counter-item text-center mb-4" data-aos="fade-up" data-aos-duration="1400">
+							<div class="giovanni-counter-item text-center mb-4" data-aos="fade-up" data-aos-duration="1400" use:aosAction>
 								<div class="content">
 									<h2 class="mb-4">4.9<i class="fas fa-star ms-1"></i></h2>
 									<p>Durchschnittliche Bewertung</p>

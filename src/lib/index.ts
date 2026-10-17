@@ -3,3 +3,4 @@ export * from './components';
 export { supabase } from './supabaseClient';
 export * from './types/menu';
 export * from './data/menuData';
+export * from './actions/aos';

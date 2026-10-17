@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { asset } from '$app/paths';
+	import 'svelte-aos/styles/full.css';
 	import './layout.css';
 
 	let { children } = $props();
@@ -22,8 +23,6 @@
 	<link rel="stylesheet" href={asset('/assets/fonts/fontawesome/css/all.min.css')} />
 	<!-- Bootstrap css -->
 	<link rel="stylesheet" href={asset('/assets/css/plugins/bootstrap.min.css')} />
-	<!-- AOS Animation -->
-	<link rel="stylesheet" href={asset('/assets/css/plugins/aos.css')} />
 	<!-- Common Style css -->
 	<link rel="stylesheet" href={asset('/assets/css/common-style.css')} />
 	<!-- Style css -->

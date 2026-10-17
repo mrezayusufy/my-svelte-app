@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { asset } from '$app/paths';
+	import { aosAction } from '$lib/actions/aos';
 	let { data } = $props();
 </script>
 
@@ -18,17 +19,17 @@
 				<div class="giovanni-image-box image-box-one">
 					<div class="row">
 						<div class="col-md-6">
-							<div class="giovanni-image image-radius mb-4" data-aos="fade-down" data-aos-duration="1000">
+							<div class="giovanni-image image-radius mb-4" data-aos="fade-down" data-aos-duration="1000" use:aosAction>
 								<img src={data.section_images[0].image_path} alt={data.section_images[0].alt_text} />
 							</div>
 						</div>
 						<div class="col-md-6">
-							<div class="giovanni-image image-radius mb-4" data-aos="fade-down" data-aos-duration="1100">
+							<div class="giovanni-image image-radius mb-4" data-aos="fade-down" data-aos-duration="1100" use:aosAction>
 								<img src={data.section_images[1].image_path} alt={data.section_images[1].alt_text} />
 							</div>
 						</div>
 						<div class="col-sm-12">
-							<div class="giovanni-image mb-4" data-aos="fade-up" data-aos-duration="1200">
+							<div class="giovanni-image mb-4" data-aos="fade-up" data-aos-duration="1200" use:aosAction>
 								<img src={data.section_images[2].image_path} alt={data.section_images[2].alt_text} />
 							</div>
 						</div>
@@ -40,13 +41,13 @@
 			<div class="col-xl-6 col-lg-9 order-xl-2 order-2">
 				<div class="giovanni-content-box text-white text-center">
 					<div class="section-title text-center mb-4">
-						<span class="sub-title" data-aos="fade-down" data-aos-duration="1000">{data.subtitle}</span>
+						<span class="sub-title" data-aos="fade-down" data-aos-duration="1000" use:aosAction>{data.subtitle}</span>
 						<h2 class="text-anm">{data.title}</h2>
 					</div>
-					<p class="mb-5 pb-2" data-aos="fade-up" data-aos-duration="1000">
+					<p class="mb-5 pb-2" data-aos="fade-up" data-aos-duration="1000" use:aosAction>
 						{data.content}
 					</p>
-					<div class="giovanni-button" data-aos="fade-up" data-aos-duration="1000">
+					<div class="giovanni-button" data-aos="fade-up" data-aos-duration="1000" use:aosAction>
 						<a href="#contact" class="theme-btn style-two">KONTAKTIEREN SIE UNS</a>
 					</div>
 				</div>
@@ -55,7 +56,7 @@
 			<!-- Right Feature Image -->
 			<div class="col-xl-3 col-md-6 order-xl-3 order-1">
 				<div class="giovanni-image-box image-box-two mb-xl-0 mb-5">
-					<div class="giovanni-image" data-aos="fade-up" data-aos-duration="1000">
+					<div class="giovanni-image" data-aos="fade-up" data-aos-duration="1000" use:aosAction>
 						<img src={data.section_images[3].image_path} alt={data.section_images[3].alt_text} />
 					</div>
 				</div>

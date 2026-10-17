@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { resolve, asset } from '$app/paths';
+	import { aosAction } from '$lib/actions/aos';
 </script>
 
 <footer class="default-footer rs-footer pt-5 p-r z-1" id="contact">
@@ -16,7 +17,7 @@
 			<div class="row">
 				<div class="col-xl-3 col-md-6">
 					<!-- Footer About Widget -->
-					<div class="footer-widget footer-about-widget mb-4 pb-3" data-aos="fade-up" data-aos-duration="800">
+					<div class="footer-widget footer-about-widget mb-4 pb-3" data-aos="fade-up" data-aos-duration="800" use:aosAction>
 						<div class="widget-content">
 							<a href={resolve('/')} class="mb-4 d-inline-block brand-logo-footer">
 								<img
@@ -37,7 +38,7 @@
 
 				<div class="col-xl-2 col-md-6">
 					<!-- Footer Nav Widget -->
-					<div class="footer-widget footer-nav-widget mb-4 pb-3" data-aos="fade-up" data-aos-duration="1000">
+					<div class="footer-widget footer-nav-widget mb-4 pb-3" data-aos="fade-up" data-aos-duration="1000" use:aosAction>
 						<h4 class="widget-title mb-3 pb-2">Nützliche Links</h4>
 						<div class="widget-content">
 							<ul>
@@ -53,7 +54,7 @@
 
 				<div class="col-xl-3 col-md-6">
 					<!-- Footer Time Widget -->
-					<div class="footer-widget footer-time-widget mb-4 pb-3" data-aos="fade-up" data-aos-duration="1200">
+					<div class="footer-widget footer-time-widget mb-4 pb-3" data-aos="fade-up" data-aos-duration="1200" use:aosAction>
 						<h4 class="widget-title mb-3 pb-2">Öffnungszeiten</h4>
 						<div class="widget-content">
 							<ul>
@@ -67,7 +68,7 @@
 
 				<div class="col-xl-4 col-md-6">
 					<!-- Footer Newsletter Widget -->
-					<div class="footer-widget footer-newsletter-widget mb-4 pb-3" data-aos="fade-up" data-aos-duration="1400">
+					<div class="footer-widget footer-newsletter-widget mb-4 pb-3" data-aos="fade-up" data-aos-duration="1400" use:aosAction>
 						<h4 class="widget-title mb-3 pb-2">Unser Newsletter</h4>
 						<div class="widget-content">
 							<p>Köstliche Neuigkeiten, Angebote & mehr</p>
@@ -95,12 +96,12 @@
 		<div class="copyright-area pt-4 pb-4 border-top border-secondary border-opacity-25">
 			<div class="row align-items-center">
 				<div class="col-md-6">
-					<div class="copyright-text" data-aos="fade-right" data-aos-duration="1200">
+					<div class="copyright-text" data-aos="fade-right" data-aos-duration="1200" use:aosAction>
 						<p class="mb-0 text-white-50">&copy; 2025 Alle Rechte vorbehalten &bull; Giovanni's Kaffeewelt</p>
 					</div>
 				</div>
 				<div class="col-md-6">
-					<div class="copyright-link float-md-end text-white-50" data-aos="fade-left" data-aos-duration="1400">
+					<div class="copyright-link float-md-end text-white-50" data-aos="fade-left" data-aos-duration="1400" use:aosAction>
 						<a href="#terms" class="me-3">Datenschutz</a>
 						<a href="#terms">AGB</a>
 					</div>

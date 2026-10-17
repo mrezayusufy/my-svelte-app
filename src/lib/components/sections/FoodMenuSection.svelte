@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from "svelte";
 	import { supabase } from "$lib/supabaseClient";
+	import { aosAction } from "$lib/actions/aos";
 	import type { CategoryMenu, MenuItem } from "$lib/types/menu";
 
 	let {
@@ -351,7 +352,8 @@
 					<span
 						class="sub-title"
 						data-aos="fade-down"
-						data-aos-duration="1000">Giovanni's Speisekarte</span
+						data-aos-duration="1000"
+						use:aosAction>Giovanni's Speisekarte</span
 					>
 					<h2 class="text-anm">Genuss in jedem Bissen</h2>
 
@@ -360,6 +362,7 @@
 						style="max-width: 680px;"
 						data-aos="fade-up"
 						data-aos-duration="1100"
+						use:aosAction
 					>
 						Entdecken Sie unsere handverlesenen Kaffeespezialitäten,
 						frischen Bowls, herzhaften Frühstücke, französischen
@@ -374,6 +377,7 @@
 			class="row justify-content-center mb-4"
 			data-aos="fade-up"
 			data-aos-duration="1000"
+			use:aosAction
 		>
 			<div class="col-lg-6 col-md-8">
 				<div class="search-box position-relative">
@@ -403,6 +407,7 @@
 			class="row mb-3 category-pills"
 			data-aos="fade-up"
 			data-aos-duration="1100"
+			use:aosAction
 		>
 			<div class="col-lg-12">
 				<div class="category-tabs-wrapper" bind:this={navContainerRef}>
@@ -638,7 +643,7 @@
 
 		<!-- Pagination Controls (10 items per page) -->
 		{#if totalPages > 1}
-			<div class="row pb-5" data-aos="fade-up" data-aos-duration="800">
+			<div class="row pb-5" data-aos="fade-up" data-aos-duration="800" use:aosAction>
 				<div class="col-lg-12">
 					<nav
 						class="menu-pagination d-flex flex-column align-items-center gap-3"

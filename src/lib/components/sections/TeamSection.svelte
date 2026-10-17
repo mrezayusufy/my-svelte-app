@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { asset } from '$app/paths';
+	import { aosAction } from '$lib/actions/aos';
 	import type { SectionItem } from '$lib/types/menu';
 
 	interface TeamMember {
@@ -79,7 +80,7 @@
 		<div class="row justify-content-center py-5">
 			<div class="col-lg-6">
 				<div class="section-title text-center mt-4">
-					<span class="sub-title" data-aos="fade-down" data-aos-duration="1000">
+					<span class="sub-title" data-aos="fade-down" data-aos-duration="1000" use:aosAction>
 						{data?.subtitle}
 					</span>
 					<h2 class="text-anm" >
@@ -92,7 +93,7 @@
 		<div class="row justify-content-center pb-5">
 			{#each teamMembers as member, idx}
 				<div class="col-lg-4 col-md-6 col-sm-12">
-					<div class="rs-team-item text-center mb-4" data-aos="fade-up" data-aos-duration={member.duration}>
+					<div class="rs-team-item text-center mb-4" data-aos="fade-up" data-aos-duration={member.duration} use:aosAction={{ animation: 'fade-up', duration: member.duration }}>
 						<div class="member-image mb-4">
 							<img
 								src={member.image}

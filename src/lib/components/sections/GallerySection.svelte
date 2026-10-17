@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
+	import { aosAction } from '$lib/actions/aos';
 
 	let { data } = $props();
 
@@ -83,8 +84,8 @@
 	<div class="container">
 		<div class="row py-5">
 			<div class="col-lg-12">
-				<div class="section-title text-center mt-4" data-aos="fade-down" data-aos-duration="1000">
-					<span class="sub-title" data-aos="fade-down" data-aos-duration="1000">{data.subtitle}</span>
+				<div class="section-title text-center mt-4" data-aos="fade-down" data-aos-duration="1000" use:aosAction>
+					<span class="sub-title" data-aos="fade-down" data-aos-duration="1000" use:aosAction>{data.subtitle}</span>
 					<h2>{data.title}</h2>
 				</div>
 			</div>

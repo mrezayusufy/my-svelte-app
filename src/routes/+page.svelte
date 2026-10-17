@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import AOS from 'aos';
+	import { AOS } from '$lib/actions/aos';
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import {
@@ -23,13 +23,6 @@
 	let { data }: { data: PageData } = $props();
 
 	onMount(() => {
-		// Initialize AOS for scroll animations
-		AOS.init({
-			offset: 40,
-			duration: 800,
-			once: true
-		});
-
 		// Initialize GSAP ScrollTrigger for .text-anm headings
 		gsap.registerPlugin(ScrollTrigger);
 
@@ -49,6 +42,9 @@
 		});
 	});
 </script>
+
+<!-- AOS Svelte Global Configuration -->
+<AOS options={{ offset: 40, duration: 800, once: true, disable: false }} />
 
 <!-- Preloader -->
 <Preloader />

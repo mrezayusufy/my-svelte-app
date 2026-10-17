@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { supabase } from '$lib/supabaseClient';
 	import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_PUBLISHABLE_KEY } from '$env/static/public';
+	import { aosAction } from '$lib/actions/aos';
 	let {data} = $props();
 	// Helper to get today's date formatted as YYYY-MM-DD
 	function getTodayDateString(): string {
@@ -209,10 +210,10 @@
 			<div class="col-lg-8">
 				<div class="giovanni-content-box text-center mb-4">
 					<div class="section-title text-center text-white mb-3">
-						<span class="sub-title" data-aos="fade-down" data-aos-duration="1000">{data.subtitle}</span>
+						<span class="sub-title" data-aos="fade-down" data-aos-duration="1000" use:aosAction>{data.subtitle}</span>
 						<h2 class="text-anm text-white">{data.title}</h2>
 					</div>
-					<p class="text-white opacity-75 mb-4" data-aos="fade-up" data-aos-duration="1100">
+					<p class="text-white opacity-75 mb-4" data-aos="fade-up" data-aos-duration="1100" use:aosAction>
 						{data.content}
 					</p>
 				</div>
@@ -222,7 +223,7 @@
 		<!-- Main Reservation Card -->
 		<div class="row justify-content-center">
 			<div class="col-xl-10 col-lg-11">
-				<div class="reservation-card p-4 p-md-5" data-aos="fade-up" data-aos-duration="1200">
+				<div class="reservation-card p-4 p-md-5" data-aos="fade-up" data-aos-duration="1200" use:aosAction>
 					{#if isSuccess && lastBookingSummary}
 						<!-- Success State View -->
 						<div class="booking-success-box text-center py-4">
