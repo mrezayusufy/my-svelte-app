@@ -55,7 +55,7 @@
 					<!-- Header Nav Right -->
 					<div class="nav-right-item">
 						<div class="nav-button d-none d-md-block">
-							<a href="#reservation" class="theme-btn style-one">Reservierung</a>
+							<a href="{resolve('/')}#reservation" class="theme-btn style-one">Reservierung</a>
 						</div>
 						<button
 							class="navbar-toggler {mobileMenuOpen ? 'active' : ''} border-0 bg-transparent"

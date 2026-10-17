@@ -42,11 +42,11 @@
 						<h4 class="widget-title mb-3 pb-2">Nützliche Links</h4>
 						<div class="widget-content">
 							<ul>
-								<li><a href="#about">Über uns</a></li>
-								<li><a href="#chefs">Unser Team</a></li>
-								<li><a href="#menu">Speisekarte</a></li>
-								<li><a href="#blog">Aktuelles</a></li>
-								<li><a href="#contact">Kontakt</a></li>
+								<li><a href="{resolve('/')}#about">Über uns</a></li>
+								<li><a href="{resolve('/')}#chefs">Unser Team</a></li>
+								<li><a href="{resolve('/')}#menu">Speisekarte</a></li>
+								<li><a href="{resolve('/')}#blog">Aktuelles</a></li>
+								<li><a href={resolve('/contact')}>Kontakt</a></li>
 							</ul>
 						</div>
 					</div>

@@ -47,36 +47,37 @@
 					Startseite
 				</a>
 			</li>
-			<li class="menu-item"><a href="#about" onclick={closeMenu}>Über uns</a></li>
+			<li class="menu-item"><a href="{resolve('/')}#about" onclick={closeMenu}>Über uns</a></li>
 			<li class="menu-item has-children">
-				<a href="#menu" onclick={(e) => { e.preventDefault(); toggleSubMenu('menu'); }}>
+				<a href="{resolve('/')}#menu" onclick={(e) => { e.preventDefault(); toggleSubMenu('menu'); }}>
 					Speisekarte
 					<span class="dd-trigger ms-1"><i class="far fa-angle-down"></i></span>
 				</a>
 				<ul class="sub-menu" style="display: {activeSubMenu === 'menu' || !mobileMenuOpen ? '' : 'none'};">
-					<li><a href="#menu" onclick={closeMenu}>Hauptmenü</a></li>
-					<li><a href="#gallery" onclick={closeMenu}>Galerie</a></li>
-					<li><a href="#chefs" onclick={closeMenu}>Unser Team</a></li>
+					<li><a href="{resolve('/')}#menu" onclick={closeMenu}>Hauptmenü</a></li>
+					<li><a href="{resolve('/')}#gallery" onclick={closeMenu}>Galerie</a></li>
+					<li><a href="{resolve('/')}#chefs" onclick={closeMenu}>Unser Team</a></li>
 				</ul>
 			</li>
 			<li class="menu-item has-children">
-				<a href="#chefs" onclick={(e) => { e.preventDefault(); toggleSubMenu('pages'); }}>
+				<a href="{resolve('/')}#chefs" onclick={(e) => { e.preventDefault(); toggleSubMenu('pages'); }}>
 					Seiten
 					<span class="dd-trigger ms-1"><i class="far fa-angle-down"></i></span>
 				</a>
 				<ul class="sub-menu" style="display: {activeSubMenu === 'pages' || !mobileMenuOpen ? '' : 'none'};">
-					<li><a href="#chefs" onclick={closeMenu}>Unser Team</a></li>
-					<li><a href="#opening-time" onclick={closeMenu}>Öffnungszeiten</a></li>
-					<li><a href="#blog" onclick={closeMenu}>Aktuelles</a></li>
+					<li><a href="{resolve('/')}#chefs" onclick={closeMenu}>Unser Team</a></li>
+					<li><a href="{resolve('/')}#opening-time" onclick={closeMenu}>Öffnungszeiten</a></li>
+					<li><a href="{resolve('/')}#blog" onclick={closeMenu}>Aktuelles</a></li>
+					<li><a href={resolve('/contact')} onclick={closeMenu}>Kontakt</a></li>
 				</ul>
 			</li>
-			<li class="menu-item"><a href="#contact" onclick={closeMenu}>Kontakt</a></li>
+			<li class="menu-item"><a href={resolve('/contact')} onclick={closeMenu}>Kontakt</a></li>
 		</ul>
 	</nav>
 
 	<!-- Theme Nav Button (Mobile) -->
 	<div class="theme-nav-button mt-3 d-block d-md-none">
-		<a href="#reservation" class="theme-btn style-one" onclick={closeMenu}>Reservierung</a>
+		<a href="{resolve('/')}#reservation" class="theme-btn style-one" onclick={closeMenu}>Reservierung</a>
 	</div>
 
 	<!-- Theme Menu Bottom (Mobile) -->

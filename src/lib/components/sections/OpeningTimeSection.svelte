@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import { aosAction } from '$lib/actions/aos';
 
 	const openingHours = [
@@ -24,7 +25,7 @@
 						Besuchen Sie uns während unserer Öffnungszeiten für ein unvergessliches Genusserlebnis voller köstlicher Speisen, herzlicher Atmosphäre und zuvorkommendem Service.
 					</p>
 					<div class="giovanni-button" data-aos="fade-up" data-aos-duration="1200" use:aosAction>
-						<a href="#contact" class="theme-btn style-two">Kontaktieren Sie uns</a>
+						<a href={resolve('/contact')} class="theme-btn style-two">Kontaktieren Sie uns</a>
 					</div>
 				</div>
 
