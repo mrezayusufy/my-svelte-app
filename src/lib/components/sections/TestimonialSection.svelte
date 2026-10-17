@@ -4,19 +4,19 @@
 	const testimonials = [
 		{
 			quote:
-				'Italian Redefined offers a delightful culinary experience. Each dish blends traditional Italian flavors with contemporary flair. Fresh ingredients and exceptional hospitality.',
-			author: 'John Smith / Main Chef',
+				'Italienische Küche neu definiert bietet ein wunderbares kulinarisches Erlebnis. Jedes Gericht vereint traditionelle italienische Aromen mit modernem Flair. Frische Zutaten und herzliche Gastfreundschaft.',
+			author: 'John Smith / Chefkoch',
 			rating: 5
 		},
 		{
 			quote:
-				'Giovanni has become our favorite dining destination in town. The pasta is handmade daily, the wine pairings are inspired, and the atmosphere is wonderfully romantic.',
-			author: 'Elena Rostova / Food Critic',
+				'Giovanni’s Kaffeewelt ist zu unserem absoluten Lieblingsort geworden. Frische Spezialitäten, handwerkliche Kaffeekunst und eine herrlich einladende Atmosphäre.',
+			author: 'Elena Rostova / Restaurantkritikerin',
 			rating: 5
 		},
 		{
 			quote:
-				'An extraordinary gastronomic journey. Every plate is crafted with authentic passion, exquisite balance, and an eye for artistic presentation.',
+				'Eine außergewöhnliche gastronomische Reise. Jeder Teller wird mit echter Leidenschaft, perfekter Ausgewogenheit und viel Liebe zum Detail zubereitet.',
 			author: 'Marco Valenti / Sommelier',
 			rating: 5
 		}
@@ -57,14 +57,14 @@
 						<button
 							class="btn btn-outline-light rounded-circle px-3 py-2"
 							onclick={prevTestimonial}
-							aria-label="Previous Testimonial"
+							aria-label="Vorherige Bewertung"
 						>
 							<i class="far fa-angle-left"></i>
 						</button>
 						<button
 							class="btn btn-outline-light rounded-circle px-3 py-2"
 							onclick={nextTestimonial}
-							aria-label="Next Testimonial"
+							aria-label="Nächste Bewertung"
 						>
 							<i class="far fa-angle-right"></i>
 						</button>
