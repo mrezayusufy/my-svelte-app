@@ -33,7 +33,7 @@
 		<button
 			class="navbar-close border-0 bg-transparent text-white"
 			onclick={closeMenu}
-			aria-label="Close menu"
+			aria-label="Menü schließen"
 		>
 			<i class="far fa-times"></i>
 		</button>
@@ -44,44 +44,44 @@
 		<ul>
 			<li class="menu-item has-children">
 				<a href={resolve('/')}>
-					Home
+					Startseite
 				</a>
 			</li>
-			<li class="menu-item"><a href="#about" onclick={closeMenu}>About Us</a></li>
+			<li class="menu-item"><a href="#about" onclick={closeMenu}>Über uns</a></li>
 			<li class="menu-item has-children">
 				<a href="#menu" onclick={(e) => { e.preventDefault(); toggleSubMenu('menu'); }}>
-					Menu
+					Speisekarte
 					<span class="dd-trigger ms-1"><i class="far fa-angle-down"></i></span>
 				</a>
 				<ul class="sub-menu" style="display: {activeSubMenu === 'menu' || !mobileMenuOpen ? '' : 'none'};">
-					<li><a href="#menu" onclick={closeMenu}>Main Menu</a></li>
-					<li><a href="#gallery" onclick={closeMenu}>Gallery</a></li>
-					<li><a href="#chefs" onclick={closeMenu}>Our Chefs</a></li>
+					<li><a href="#menu" onclick={closeMenu}>Hauptmenü</a></li>
+					<li><a href="#gallery" onclick={closeMenu}>Galerie</a></li>
+					<li><a href="#chefs" onclick={closeMenu}>Unser Team</a></li>
 				</ul>
 			</li>
 			<li class="menu-item has-children">
 				<a href="#chefs" onclick={(e) => { e.preventDefault(); toggleSubMenu('pages'); }}>
-					Pages
+					Seiten
 					<span class="dd-trigger ms-1"><i class="far fa-angle-down"></i></span>
 				</a>
 				<ul class="sub-menu" style="display: {activeSubMenu === 'pages' || !mobileMenuOpen ? '' : 'none'};">
-					<li><a href="#chefs" onclick={closeMenu}>Our Chefs</a></li>
-					<li><a href="#opening-time" onclick={closeMenu}>Opening Hours</a></li>
-					<li><a href="#blog" onclick={closeMenu}>Latest Blog</a></li>
+					<li><a href="#chefs" onclick={closeMenu}>Unser Team</a></li>
+					<li><a href="#opening-time" onclick={closeMenu}>Öffnungszeiten</a></li>
+					<li><a href="#blog" onclick={closeMenu}>Aktuelles</a></li>
 				</ul>
 			</li>
-			<li class="menu-item"><a href="#contact" onclick={closeMenu}>Contact</a></li>
+			<li class="menu-item"><a href="#contact" onclick={closeMenu}>Kontakt</a></li>
 		</ul>
 	</nav>
 
 	<!-- Theme Nav Button (Mobile) -->
 	<div class="theme-nav-button mt-3 d-block d-md-none">
-		<a href="#reservation" class="theme-btn style-one" onclick={closeMenu}>Reservation</a>
+		<a href="#reservation" class="theme-btn style-one" onclick={closeMenu}>Reservierung</a>
 	</div>
 
 	<!-- Theme Menu Bottom (Mobile) -->
 	<div class="theme-menu-bottom mt-5 d-block d-lg-none">
-		<h5 class="text-white">Follow Us</h5>
+		<h5 class="text-white">Folgen Sie uns</h5>
 		<ul class="social-link">
 			<li><a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
 			<li><a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>

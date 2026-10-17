@@ -30,7 +30,7 @@
 	onkeydown={(e) => e.key === 'Escape' && (mobileMenuOpen = false)}
 	role="button"
 	tabindex="0"
-	aria-label="Close Mobile Menu"
+	aria-label="Mobiles Menü schließen"
 ></div>
 
 <!-- Header Area -->
@@ -55,12 +55,12 @@
 					<!-- Header Nav Right -->
 					<div class="nav-right-item">
 						<div class="nav-button d-none d-md-block">
-							<a href="#reservation" class="theme-btn style-one">Reservation</a>
+							<a href="#reservation" class="theme-btn style-one">Reservierung</a>
 						</div>
 						<button
 							class="navbar-toggler {mobileMenuOpen ? 'active' : ''} border-0 bg-transparent"
 							onclick={() => (mobileMenuOpen = !mobileMenuOpen)}
-							aria-label="Toggle Navigation Menu"
+							aria-label="Navigationsmenü umschalten"
 						>
 							<span></span>
 							<span></span>
