@@ -42,10 +42,10 @@
 						<h4 class="widget-title mb-3 pb-2">Nützliche Links</h4>
 						<div class="widget-content">
 							<ul>
-								<li><a href="{resolve('/')}#about">Über uns</a></li>
-								<li><a href="{resolve('/')}#chefs">Unser Team</a></li>
+								<li><a href={resolve('/uber-uns')}>Über uns</a></li>
 								<li><a href="{resolve('/')}#menu">Speisekarte</a></li>
 								<li><a href="{resolve('/')}#blog">Aktuelles</a></li>
+								<li><a href={resolve('/404')}>404 Seite</a></li>
 								<li><a href={resolve('/contact')}>Kontakt</a></li>
 							</ul>
 						</div>
