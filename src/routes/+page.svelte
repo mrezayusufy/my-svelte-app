@@ -12,7 +12,6 @@
 		FoodMenuSection,
 		GallerySection,
 		TestimonialSection,
-		TeamSection,
 		BookingSection,
 		OpeningTimeSection,
 		BlogSection,

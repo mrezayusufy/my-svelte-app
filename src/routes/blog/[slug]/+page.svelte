@@ -9,14 +9,7 @@
 
 	let { data }: { data: PageData } = $props();
 
-	const instagramImages = [
-		asset('/assets/images/innerpage/instagram/insta-img1.jpg'),
-		asset('/assets/images/innerpage/instagram/insta-img2.jpg'),
-		asset('/assets/images/innerpage/instagram/insta-img3.jpg'),
-		asset('/assets/images/innerpage/instagram/insta-img4.jpg'),
-		asset('/assets/images/innerpage/instagram/insta-img2.jpg'),
-		asset('/assets/images/innerpage/instagram/insta-img3.jpg')
-	];
+ 
 
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
@@ -193,7 +186,7 @@
 									<div class="col-lg-4 col-md-6 mb-4">
 										<div class="giovanni-blog-post shadow-sm rounded-3 overflow-hidden bg-white h-100">
 											<div class="post-thumbnail position-relative overflow-hidden">
-												<a href={resolve('/blog/' + recent.slug)}>
+												<a href={resolve('/blog/[slug]',{ slug: recent.slug})} class="d-flex">
 													<img
 														src={asset(recent.image)}
 														alt={recent.title}
@@ -207,11 +200,11 @@
 													<span><i class="far fa-calendar-alt me-1 text-gold"></i>{recent.date}</span>
 												</div>
 												<h5 class="mb-3">
-													<a href={resolve('/blog/' + recent.slug)} class="text-dark text-decoration-none">
+													<a href={resolve('/blog/[slug]',{ slug: recent.slug})} class="text-dark text-decoration-none">
 														{recent.title}
 													</a>
 												</h5>
-												<a href={resolve('/blog/' + recent.slug)} class="read-more style-one small">
+												<a href={resolve('/blog/[slug]',{ slug: recent.slug})} class="read-more style-one small">
 													Weiterlesen <i class="far fa-arrow-right ms-1"></i>
 												</a>
 											</div>
@@ -224,41 +217,6 @@
 				</div>
 			</section>
 			<!--====== End Blog Details Section ======-->
-
-			<!--====== Start Instagram Section ======-->
-			<section class="giovanni-instagram-sec py-4">
-				<div class="container-fluid px-0">
-					<div class="row g-0">
-						{#each instagramImages as img, idx}
-							<div class="col-xl-2 col-lg-4 col-md-4 col-6">
-								<div class="giovanni-instagram-item position-relative overflow-hidden">
-									<a
-										href="https://instagram.com/giovanniskaffeewelt"
-										target="_blank"
-										rel="noreferrer"
-										class="d-block position-relative"
-									>
-										<div class="thumbnail">
-											<img
-												src={img}
-												alt="Instagram Beitrag {idx + 1}"
-												class="w-100 object-fit-cover"
-												style="height: 220px;"
-											/>
-											<div class="hover-content">
-												<div class="icon">
-													<i class="fab fa-instagram"></i>
-												</div>
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>
-						{/each}
-					</div>
-				</div>
-			</section>
-			<!--====== End Instagram Section ======-->
 		</main>
 
 		<!-- Footer -->
@@ -314,47 +272,5 @@
 			font-size: 28px;
 		}
 	}
-
-	/* Instagram Item styling */
-	.giovanni-instagram-item .thumbnail {
-		position: relative;
-		overflow: hidden;
-	}
-
-	.giovanni-instagram-item .thumbnail img {
-		transition: transform 0.5s ease;
-	}
-
-	.giovanni-instagram-item:hover .thumbnail img {
-		transform: scale(1.08);
-	}
-
-	.giovanni-instagram-item .hover-content {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: rgba(45, 68, 67, 0.65);
-		opacity: 0;
-		transition: opacity 0.35s ease;
-	}
-
-	.giovanni-instagram-item:hover .hover-content {
-		opacity: 1;
-	}
-
-	.giovanni-instagram-item .hover-content .icon {
-		color: #fff;
-		font-size: 28px;
-		transform: translateY(15px);
-		transition: transform 0.35s ease;
-	}
-
-	.giovanni-instagram-item:hover .hover-content .icon {
-		transform: translateY(0);
-	}
+ 
 </style>

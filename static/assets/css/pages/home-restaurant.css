@@ -470,8 +470,7 @@ Version: 1.0
   margin-bottom: 10px;
 }
 .giovanni-blog-post .post-content .post-meta span:not(:last-child) {
-  -webkit-margin-end: 25px;
-          margin-inline-end: 25px;
+          margin-inline-end: 12px;
 }
 .giovanni-blog-post .post-content .post-meta span i {
   -webkit-margin-end: 10px;

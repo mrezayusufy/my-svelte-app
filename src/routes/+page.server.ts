@@ -9,8 +9,8 @@ export const load: PageServerLoad = async () => {
  
 	try {
 		const [categoriesResult, menuResult, sectionResult] = await Promise.all([
-			supabase.from('category_menu').select('*').order('id', { ascending: true }),
-			supabase.from('menu').select('*').order('id', { ascending: true }),
+			supabase.from('category_menu').select('*').order('sort_order', { ascending: true }),
+			supabase.from('menu_with_category_order').select('*').order('category_sort_order', { ascending: true }),
 			supabase.from("sections")
 			.select(`
 				id,
@@ -27,14 +27,14 @@ export const load: PageServerLoad = async () => {
 			`)
 			.eq("is_active", true)
 		]);
-
-		if (categoriesResult.data && categoriesResult.data.length > 0) {
+		console.log(sectionResult)
+		if (categoriesResult.data && categoriesResult.data.length > 0 && categoriesResult.success) {
 			categories = categoriesResult.data as CategoryMenu[];
 		}
-		if (menuResult.data && menuResult.data.length > 0) {
+		if (menuResult.data && menuResult.data.length > 0 && menuResult.success) {
 			menu = menuResult.data as MenuItem[];
 		}
-		if (sectionResult.data && sectionResult.data.length > 0) {
+		if (sectionResult.data && sectionResult.data.length > 0 && sectionResult.success) {
 			section = sectionResult.data as SectionItem[];
 		}
 	} catch (err) {

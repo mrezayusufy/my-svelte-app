@@ -43,11 +43,8 @@
 				supabase
 					.from("category_menu")
 					.select("*")
-					.order("id", { ascending: true }),
-				supabase
-					.from("menu")
-					.select("*")
-					.order("id", { ascending: true }),
+					.order("sort_order", { ascending: true }),
+				supabase.from('menu_with_category_order').select('*').order('category_sort_order', { ascending: true }),
 			]);
 
 			console.log(
@@ -104,11 +101,6 @@
 	let currentPage = $state(1);
 	const ITEMS_PER_PAGE = 10;
 
-	// Top-level categories (no parent_id)
-	let primaryCategories = $derived(
-		activeCategories.filter((c) => !c.parent_id),
-	);
-
 	// Calculate item count per category
 	function getCategoryCount(catId: number): number {
 		return activeMenuItems.filter((item) => item.category_id === catId).length;
@@ -129,7 +121,7 @@
 
 	let allCategoryTabs = $derived<CategoryTabItem[]>([
 		{ id: "all", name: "Alle", count: activeMenuItems.length },
-		...primaryCategories.map((c) => ({
+		...activeCategories.map((c) => ({
 			id: c.id,
 			name: c.name,
 			count: getCategoryCount(c.id),
@@ -595,17 +587,21 @@
 					<div class="col-lg-6 col-md-12">
 						<div class="menu-card flex flex-row h-100 items-center">
 							<div
-								class="size-20 overflow-hidden rounded-full me-3 bg-white text-center"
+								class="size-20 overflow-hidden rounded-full me-3 bg-transparent text-transparent text-center"
 							>
+							{#if item.photo}
 								<img
 									class="size-20 overflow-hidden"
 									src={item.photo}
 									alt={item.title}
 								/>
+							{:else}
+								{item.title}
+							{/if}
 							</div>
 							<div class="flex-col flex-1 relative">
 								<div
-									class="menu-card-header d-flex align-items-baseline justify-content-between"
+									class="menu-card-header relative d-flex align-items-baseline justify-content-between"
 								>
 									<div class="menu-card-title-group me-2">
 										<h3 class="menu-card-title">
@@ -617,6 +613,9 @@
 									></div>
 									<div class="menu-card-price">
 										{item.price}
+									</div>
+									<div class="absolute end-6 bottom-6 text-white font-base ">
+										{item.price_desc}
 									</div>
 								</div>
 

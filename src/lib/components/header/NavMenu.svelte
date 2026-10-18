@@ -67,7 +67,6 @@
 					<li><a href={resolve('/uber-uns')} onclick={closeMenu}>Über uns</a></li>
 					<li><a href="{resolve('/')}#opening-time" onclick={closeMenu}>Öffnungszeiten</a></li>
 					<li><a href={resolve('/blog')} onclick={closeMenu}>Blog & Aktuelles</a></li>
-					<li><a href={resolve('/404')} onclick={closeMenu}>404 Seite</a></li>
 					<li><a href={resolve('/contact')} onclick={closeMenu}>Kontakt</a></li>
 				</ul>
 			</li>
@@ -94,7 +93,7 @@
 
 <style>
 	:global(.header-navigation .theme-nav-menu) {
-		background-color: var(--primary-black-color, #2D4443) !important;
+		background-color: transparent;
 	}
 	:global(.header-navigation .theme-nav-menu .main-menu ul li a) {
 		color: #ffffff !important;

@@ -174,7 +174,7 @@
 			<!--======  Start Page Banner Section  ======-->
 			<section
 				class="page-banner bg_cover p-r z-1"
-				style="background-image: url('{asset('/assets/images/innerpage/bg/page-bg.jpg')}');"
+				style="background-image: url('{asset('/assets/contact.avif')}');"
 			>
 				<div class="container">
 					<div class="row justify-content-center">
