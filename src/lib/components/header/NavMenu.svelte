@@ -83,10 +83,9 @@
 	<div class="theme-menu-bottom mt-5 d-block d-lg-none">
 		<h5 class="text-white">Folgen Sie uns</h5>
 		<ul class="social-link">
-			<li><a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-			<li><a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
-			<li><a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-			<li><a href="https://youtube.com" target="_blank" rel="noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+			<li><a href="https://facebook.com/giovanniskaffeewelt" target="_blank" rel="noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+			<li><a href="https://instagram.com/giovanniskaffeewelt" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+			<li><a href="https://youtube.com/giovanniskaffeewelt" target="_blank" rel="noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
 		</ul>
 	</div>
 </div>
@@ -94,6 +93,15 @@
 <style>
 	:global(.header-navigation .theme-nav-menu) {
 		background-color: transparent;
+	}
+	@media screen and (max-width: 62rem) {
+		:global(.header-navigation .theme-nav-menu) {
+			background-color: #2D4443;
+		}
+		
+		:global(.header-navigation .theme-menu-bottom .social-link li a ) {
+			color: #fff;
+		}
 	}
 	:global(.header-navigation .theme-nav-menu .main-menu ul li a) {
 		color: #ffffff !important;
