@@ -12,6 +12,27 @@
 		return `${year}-${month}-${day}`;
 	}
 
+	// Helper to format date in German (e.g. "Montag 20 Nov 2026") for Telegram
+	function formatDateForTelegram(dateString: string): string {
+		if (!dateString) return '';
+		const [year, month, day] = dateString.split('-').map(Number);
+		if (!year || !month || !day) return dateString;
+		const dateObj = new Date(year, month - 1, day);
+		const parts = new Intl.DateTimeFormat('de-DE', {
+			weekday: 'long',
+			day: '2-digit',
+			month: 'short',
+			year: 'numeric'
+		}).formatToParts(dateObj);
+
+		const weekday = parts.find((p) => p.type === 'weekday')?.value || '';
+		const dayVal = parts.find((p) => p.type === 'day')?.value || '';
+		const monthVal = (parts.find((p) => p.type === 'month')?.value || '').replace('.', '');
+		const yearVal = parts.find((p) => p.type === 'year')?.value || '';
+
+		return `${weekday} ${dayVal} ${monthVal} ${yearVal}`.trim();
+	}
+
 	const minDate = getTodayDateString();
 
 	// Form field states
@@ -63,13 +84,14 @@
 		isSubmitting = true;
 		errorMessage = '';
 
+		const formattedDate = formatDateForTelegram(date);
+
 		const payload = {
 			name: name.trim(),
 			phone: phone.trim(),
-			date: date,
+			date: formattedDate,
 			time: time,
 			guests: Number(guests) || 2,
-			note: note.trim() || undefined,
 			message: note.trim() || undefined
 		};
 
@@ -93,59 +115,32 @@
 			lastError = err?.message || '';
 		}
 
-		// 2. If not sent, try invoking 'quick-action' via Supabase client
+		// 2. If client invoke failed, try via direct fetch to telegram-notify-reservation
 		if (!sentSuccessfully) {
 			try {
-				const res = await supabase.functions.invoke('quick-action', {
-					body: payload
+				const directRes = await fetch(`${PUBLIC_SUPABASE_URL}/functions/v1/telegram-notify-reservation`, {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+						'apikey': PUBLIC_SUPABASE_PUBLISHABLE_KEY,
+						'Authorization': `Bearer ${PUBLIC_SUPABASE_PUBLISHABLE_KEY}`
+					},
+					body: JSON.stringify(payload)
 				});
 
-				if (!res.error) {
+				if (directRes.ok) {
 					sentSuccessfully = true;
 				} else {
-					console.warn('supabase.functions.invoke(quick-action) error:', res.error);
-					lastError = res.error.message || lastError;
+					const errJson = (await directRes.json().catch(() => null)) as Record<string, any> | null;
+					lastError = errJson?.error || errJson?.message || `Status: ${directRes.status}`;
 				}
-			} catch (err: any) {
-				console.warn('invoke quick-action exception:', err);
-				lastError = err?.message || lastError;
-			}
+			} catch (fetchErr: any) {
+				console.warn('Direct fetch to telegram-notify-reservation failed:', fetchErr);
+				lastError = fetchErr?.message || lastError;
+			} 
 		}
 
-		// 3. If client invoke failed, try via direct fetch with CORS & API headers
-		if (!sentSuccessfully) {
-			const endpoints = [
-				`${PUBLIC_SUPABASE_URL}/functions/v1/telegram-notify-reservation`,
-				`${PUBLIC_SUPABASE_URL}/functions/v1/quick-action`
-			];
-
-			for (const url of endpoints) {
-				try {
-					const directRes = await fetch(url, {
-						method: 'POST',
-						headers: {
-							'Content-Type': 'application/json',
-							'apikey': PUBLIC_SUPABASE_PUBLISHABLE_KEY,
-							'Authorization': `Bearer ${PUBLIC_SUPABASE_PUBLISHABLE_KEY}`
-						},
-						body: JSON.stringify(payload)
-					});
-
-					if (directRes.ok) {
-						sentSuccessfully = true;
-						break;
-					} else {
-						const errJson = (await directRes.json().catch(() => null)) as Record<string, any> | null;
-						lastError = errJson?.error || errJson?.message || `Status: ${directRes.status}`;
-					}
-				} catch (fetchErr: any) {
-					console.warn(`Direct fetch to ${url} failed:`, fetchErr);
-					lastError = fetchErr?.message || lastError;
-				}
-			}
-		}
-
-		// 4. Fallback: Try our server-side API proxy (/api/reservation)
+		// 3. Fallback: Try our server-side API proxy (/api/reservation)
 		if (!sentSuccessfully) {
 			try {
 				const apiRes = await fetch('/api/reservation', {
@@ -172,7 +167,7 @@
 		if (sentSuccessfully) {
 			lastBookingSummary = {
 				name: payload.name,
-				date: payload.date,
+				date: formattedDate,
 				time: payload.time,
 				guests: payload.guests
 			};

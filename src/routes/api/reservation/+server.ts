@@ -31,26 +31,12 @@ export const POST: RequestHandler = async ({ request }) => {
 			'Authorization': `Bearer ${PUBLIC_SUPABASE_PUBLISHABLE_KEY}`
 		};
 
-		// 1. Try telegram-notify-reservation endpoint
-		let edgeResponse = await fetch(`${PUBLIC_SUPABASE_URL}/functions/v1/telegram-notify-reservation`, {
+		// 1. Send to telegram-notify-reservation endpoint
+		const edgeResponse = await fetch(`${PUBLIC_SUPABASE_URL}/functions/v1/telegram-notify-reservation`, {
 			method: 'POST',
 			headers,
 			body: JSON.stringify(reqData)
 		});
-
-		// 2. If telegram-notify-reservation failed, try quick-action
-		if (!edgeResponse.ok) {
-			console.warn('telegram-notify-reservation returned status', edgeResponse.status, 'trying quick-action...');
-			const fallbackResponse = await fetch(`${PUBLIC_SUPABASE_URL}/functions/v1/quick-action`, {
-				method: 'POST',
-				headers,
-				body: JSON.stringify(reqData)
-			});
-
-			if (fallbackResponse.ok) {
-				edgeResponse = fallbackResponse;
-			}
-		}
 
 		const result = (await edgeResponse.json().catch(() => null)) as Record<string, any> | null;
 
