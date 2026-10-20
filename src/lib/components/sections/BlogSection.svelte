@@ -1,33 +1,27 @@
 <script lang="ts">
 	import { resolve, asset } from '$app/paths';
 	import { aosAction } from '$lib/actions/aos';
+	import type { Post } from '$lib/types/blog';
+	import { formatBlogDate } from '$lib/types/blog';
+	import { fallbackPosts } from '$lib/data/blogData';
 
-	const blogPosts = [
-		{
-			title: 'Leichte Sommergerichte für erfrischenden Genuss',
-			author: 'Giovanni Team',
-			date: '19. Mai 2025',
-			image: asset('/assets/blog-img1.jpg'),
-			duration: 1000
-		},
-		{
-			title: 'Ein Tag im Leben unseres Küchenchefs bei Giovanni’s',
-			author: 'Giovanni Team',
-			date: '19. Mai 2025',
-			image: asset('/assets/images/home-restaurant/blog/blog-img2.jpg'),
-			duration: 1200
-		},
-		{
-			title: 'Der mediterrane Einfluss hinter unseren neuen Spezialitäten',
-			author: 'Giovanni Team',
-			date: '19. Mai 2025',
-			image: asset('/assets/images/home-restaurant/blog/blog-img3.jpg'),
-			duration: 1400
-		}
-	];
+	interface Props {
+		posts?: Post[];
+	}
+
+	let { posts = fallbackPosts.slice(0, 3) }: Props = $props();
+
+	function getFallbackImage(idx: number): string {
+		const fallbacks = [
+			'/assets/blog-img1.jpg',
+			'/assets/images/home-restaurant/blog/blog-img2.jpg',
+			'/assets/images/home-restaurant/blog/blog-img3.jpg'
+		];
+		return fallbacks[idx % fallbacks.length];
+	}
 </script>
 
-<section class="rs-blog py-5" id="blog">
+<section class="rs-blog py-5" id="blog" aria-label="Aktuelle Blogbeiträge">
 	<div class="container">
 		<div class="row justify-content-center py-5">
 			<div class="col-lg-7">
@@ -39,23 +33,63 @@
 		</div>
 
 		<div class="row justify-content-center pb-xl-4">
-			{#each blogPosts as post}
+			{#each posts as post, idx}
+				{@const duration = 1000 + idx * 200}
+				{@const postImage = post.featured_image_url}
+				{@const postDate = formatBlogDate(post.published_at || post.created_at)}
+				{@const postCategory = post.categories?.name || 'Kaffeewelt'}
 				<div class="col-xl-4 col-md-6 col-sm-12">
-					<div class="giovanni-blog-post mb-5" data-aos="fade-up" data-aos-duration={post.duration} use:aosAction={{ animation: 'fade-up', duration: post.duration }}>
-						<div class="post-thumbnail">
-							<a href={resolve('/blog')}>
-								<img src={post.image} alt={post.title} />
+					<article
+						class="giovanni-blog-post mb-5 h-100 d-flex flex-column"
+						data-aos="fade-up"
+						data-aos-duration={duration}
+						use:aosAction={{ animation: 'fade-up', duration }}
+					>
+						<div class="post-thumbnail flex position-relative overflow-hidden rounded-3">
+							<a href={resolve('/blog/[slug]', { slug: post.slug })} aria-label={post.title} class="flex-1">
+								<img
+									src={postImage}
+									alt={post.featured_image_alt || post.title}
+									loading="lazy"
+									class="img-fluid w-100 object-fit-cover"
+									style="height: 240px;"
+								/>
 							</a>
+							<span class="category-tag">
+								{postCategory}
+							</span>
 						</div>
-						<div class="post-content">
-							<div class="post-meta">
-								<span><i class="far fa-user me-1"></i>Von {post.author}</span>
-								<span><i class="far fa-calendar-alt me-1"></i>{post.date}</span>
+						<div class="post-content p-0 d-flex flex-column flex-1">
+							<div class="post-meta mb-2 small text-muted">
+								<span><i class="far fa-user me-1 text-gold"></i>Giovanni Team</span>
+								{#if postDate}
+									<span class="ms-3">
+										<i class="far fa-calendar-alt me-1 text-gold"></i>
+										<time datetime={post.published_at || post.created_at}>{postDate}</time>
+									</span>
+								{/if}
 							</div>
-							<h4><a href={resolve('/blog')}>{post.title}</a></h4>
-							<a href={resolve('/blog')} class="read-more style-one">Weiterlesen</a>
+							<h3 class="post-title  fs-5 mb-1">
+								<a href={resolve('/blog/[slug]', { slug: post.slug })} class="text-dark leading-normal text-decoration-none">
+									{post.title}
+								</a>
+							</h3>
+							{#if post.excerpt}
+								<p class="text-muted small line-clamp-3 mb-1 flex-1 leading-normal">
+									{post.excerpt}
+								</p>
+							{/if}
+							<div class="mt-auto">
+								<a
+									href={resolve('/blog/[slug]', { slug: post.slug })}
+									class="read-more style-one d-inline-flex align-items-center"
+									aria-label="Weiterlesen: {post.title}"
+								>
+									Weiterlesen <i class="far fa-arrow-right ms-2"></i>
+								</a>
+							</div>
 						</div>
-					</div>
+					</article>
 				</div>
 			{/each}
 		</div>
@@ -67,3 +101,43 @@
 		</div>
 	</div>
 </section>
+
+<style>
+.category-tag {
+		background-color: rgba(45, 68, 67, 0.85);
+		backdrop-filter: blur(4px);
+		letter-spacing: 0.5px;
+		left: 0;
+		line-height: 1.5;
+		padding: 4px 12px;
+		font-size: 12px;
+		position: absolute;
+		top: 0;
+		margin: 12px;
+		border-radius: 100px;
+		color: #fff;
+		font-weight: bold;
+	}
+	.text-gold {
+		color: var(--primary-color, #d0965c);
+	}
+
+	.bg-gold {
+		background-color: var(--primary-color, #d0965c);
+	}
+
+	.post-title a {
+		transition: color 0.3s ease;
+	}
+
+	.post-title a:hover {
+		color: var(--primary-color, #d0965c) !important;
+	}
+
+	.line-clamp-3 {
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+</style>

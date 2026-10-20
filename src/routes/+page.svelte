@@ -79,7 +79,7 @@
 			<OpeningTimeSection />
 
 			<!-- Recent Blog Posts -->
-			<BlogSection />
+			<BlogSection posts={data.latestPosts} />
 		</main>
 
 		<!-- Footer -->
