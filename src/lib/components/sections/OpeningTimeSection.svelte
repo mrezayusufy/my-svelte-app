@@ -3,13 +3,13 @@
 	import { aosAction } from '$lib/actions/aos';
 
 	const openingHours = [
-		{ day: 'Montag', time: '10:00 - 19:00 Uhr', closed: false },
-		{ day: 'Dienstag', time: '10:00 - 18:00 Uhr', closed: false },
-		{ day: 'Mittwoch', time: '10:00 - 18:30 Uhr', closed: false },
-		{ day: 'Donnerstag', time: '10:00 - 19:00 Uhr', closed: false },
-		{ day: 'Freitag', time: '10:00 - 18:00 Uhr', closed: false },
-		{ day: 'Samstag', time: '10:00 - 18:30 Uhr', closed: false },
-		{ day: 'Sonntag', time: 'Geschlossen', closed: true }
+		{ day: 'Montag', time: '08:00 - 16:00 Uhr', closed: false },
+		{ day: 'Dienstag', time: '08:00 - 16:00 Uhr', closed: false },
+		{ day: 'Mittwoch', time: '08:00 - 16:30 Uhr', closed: false },
+		{ day: 'Donnerstag', time: '08:00 - 16:00 Uhr', closed: false },
+		{ day: 'Freitag', time: '08:00 - 18:00 Uhr', closed: false },
+		{ day: 'Samstag', time: '08:00 - 18:00 Uhr', closed: false },
+		{ day: 'Sonntag', time: '08:00 - 16:00 Uhr', closed: false }
 	];
 </script>
 

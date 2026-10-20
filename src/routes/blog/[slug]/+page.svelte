@@ -66,7 +66,7 @@
 	<meta property="og:url" content={canonicalUrl} />
 	<meta property="og:title" content={pageTitle} />
 	<meta property="og:description" content={pageDescription} />
-	<meta property="og:image" content={featuredImage.startsWith('http') ? featuredImage : `https://giovanniskaffeewelt.de${featuredImage}`} />
+	<meta property="og:image" content={featuredImage} />
 	<meta property="og:image:alt" content={featuredImageAlt} />
 	{#if post.published_at}
 		<meta property="article:published_time" content={post.published_at} />
@@ -79,7 +79,7 @@
 	<meta name="twitter:url" content={canonicalUrl} />
 	<meta name="twitter:title" content={pageTitle} />
 	<meta name="twitter:description" content={pageDescription} />
-	<meta name="twitter:image" content={featuredImage.startsWith('http') ? featuredImage : `https://giovanniskaffeewelt.de${featuredImage}`} />
+	<meta name="twitter:image" content={featuredImage} />
 
 	<!-- Schema.org BlogPosting Structured Data -->
 	{@html `<script type="application/ld+json">
@@ -92,7 +92,7 @@
 		},
 		"headline": "${post.title.replace(/"/g, '\\"')}",
 		"description": "${(post.meta_description || post.excerpt || '').replace(/"/g, '\\"')}",
-		"image": ["${featuredImage.startsWith('http') ? featuredImage : 'https://giovanniskaffeewelt.de' + featuredImage}"],
+		"image": ["${featuredImage}"],
 		"datePublished": "${post.published_at || post.created_at}",
 		"dateModified": "${post.updated_at}",
 		"author": {
@@ -159,7 +159,7 @@
 			<!--====== Start Page Banner ======-->
 			<section
 				class="page-banner bg_cover p-r z-1"
-				style="background-image: url('{asset('/assets/images/innerpage/bg/page-bg.jpg')}');"
+				style="background-image: url('{featuredImage}');"
 			>
 				<div class="container">
 					<div class="row justify-content-center">
