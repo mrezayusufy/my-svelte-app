@@ -245,8 +245,8 @@
 								</div>
 								<div class="content">
 									<h3>E-Mail-Adresse</h3>
-									<p><a href="mailto:info@giovanniskaffeewelt.de">info@giovanniskaffeewelt.de</a></p>
-									<p><a href="https://giovanniskaffeewelt.de" target="_blank" rel="noreferrer">giovanniskaffeewelt.de</a></p>
+									<p><a href="mailto:info@giovannikaffeewelt.de">info@giovannikaffeewelt.de</a></p>
+									<p><a href="https://giovannikaffeewelt.de" target="_blank" rel="noreferrer">giovannikaffeewelt.de</a></p>
 								</div>
 							</div>
 						</div>

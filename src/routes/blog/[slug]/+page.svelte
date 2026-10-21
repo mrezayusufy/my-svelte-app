@@ -31,7 +31,7 @@
 	const canonicalUrl = $derived(
 		post.canonical_url
 			? post.canonical_url
-			: `https://giovanniskaffeewelt.de/blog/${post.slug}`
+			: `https://giovannikaffeewelt.de/blog/${post.slug}`
 	);
 
 	onMount(() => {
@@ -98,15 +98,15 @@
 		"author": {
 			"@type": "Organization",
 			"name": "Giovanni's Kaffeewelt",
-			"url": "https://giovanniskaffeewelt.de"
+			"url": "https://giovannikaffeewelt.de"
 		},
 		"publisher": {
 			"@type": "Organization",
 			"name": "Giovanni's Kaffeewelt",
-			"url": "https://giovanniskaffeewelt.de",
+			"url": "https://giovannikaffeewelt.de",
 			"logo": {
 				"@type": "ImageObject",
-				"url": "https://giovanniskaffeewelt.de/assets/images/logo/logo.png"
+				"url": "https://giovannikaffeewelt.de/assets/images/logo/logo.png"
 			}
 		},
 		"articleSection": "${categoryName.replace(/"/g, '\\"')}"
@@ -123,13 +123,13 @@
 				"@type": "ListItem",
 				"position": 1,
 				"name": "Startseite",
-				"item": "https://giovanniskaffeewelt.de"
+				"item": "https://giovannikaffeewelt.de"
 			},
 			{
 				"@type": "ListItem",
 				"position": 2,
 				"name": "Blog",
-				"item": "https://giovanniskaffeewelt.de/blog"
+				"item": "https://giovannikaffeewelt.de/blog"
 			},
 			{
 				"@type": "ListItem",

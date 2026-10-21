@@ -58,9 +58,8 @@
 						<h4 class="widget-title mb-3 pb-2">Öffnungszeiten</h4>
 						<div class="widget-content">
 							<ul>
-								<li><span class="days">Mo - Do:</span><span class="time">10:00 - 01:00 Uhr</span></li>
-								<li><span class="days">Fr - Sa:</span><span class="time">10:00 - 01:00 Uhr</span></li>
-								<li><span class="days">Sonntag:</span><span class="off-day">Ruhetag</span></li>
+								<li><span class="days">So - Do:</span><span class="time">08:00 - 18:00 Uhr</span></li>
+								<li><span class="days">Fr - Sa:</span><span class="time">08:00 - 18:00 Uhr</span></li> 
 							</ul>
 						</div>
 					</div>

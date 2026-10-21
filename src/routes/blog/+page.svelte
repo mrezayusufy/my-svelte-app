@@ -93,27 +93,27 @@
 		name="description"
 		content="Aktuelle Beiträge, Kaffeekultur, mediterrane Rezepte und Einblicke hinter die Kulissen von Giovanni's Kaffeewelt im Herzen von Hamburg."
 	/>
-	<link rel="canonical" href="https://giovanniskaffeewelt.de/blog" />
+	<link rel="canonical" href="https://giovannikaffeewelt.de/blog" />
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://giovanniskaffeewelt.de/blog" />
+	<meta property="og:url" content="https://giovannikaffeewelt.de/blog" />
 	<meta property="og:title" content="Blog & Aktuelles | Giovanni's Kaffeewelt Hamburg" />
 	<meta
 		property="og:description"
 		content="Aktuelle Beiträge, Kaffeekultur, mediterrane Rezepte und Einblicke hinter die Kulissen von Giovanni's Kaffeewelt im Herzen von Hamburg."
 	/>
-	<meta property="og:image" content="https://giovanniskaffeewelt.de/assets/blog.avif" />
+	<meta property="og:image" content="https://giovannikaffeewelt.de/assets/blog.avif" />
 
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:url" content="https://giovanniskaffeewelt.de/blog" />
+	<meta name="twitter:url" content="https://giovannikaffeewelt.de/blog" />
 	<meta name="twitter:title" content="Blog & Aktuelles | Giovanni's Kaffeewelt Hamburg" />
 	<meta
 		name="twitter:description"
 		content="Aktuelle Beiträge, Kaffeekultur, mediterrane Rezepte und Einblicke hinter die Kulissen von Giovanni's Kaffeewelt im Herzen von Hamburg."
 	/>
-	<meta name="twitter:image" content="https://giovanniskaffeewelt.de/assets/blog.avif" />
+	<meta name="twitter:image" content="https://giovannikaffeewelt.de/assets/blog.avif" />
 
 	<!-- Schema.org Structured Data -->
 	{@html `<script type="application/ld+json">
@@ -122,11 +122,11 @@
 		"@type": "Blog",
 		"name": "Giovanni's Kaffeewelt Blog",
 		"description": "Aktuelle Beiträge, Kaffeekultur, Rezepte und Neuigkeiten von Giovanni's Kaffeewelt in Hamburg.",
-		"url": "https://giovanniskaffeewelt.de/blog",
+		"url": "https://giovannikaffeewelt.de/blog",
 		"publisher": {
 			"@type": "Restaurant",
 			"name": "Giovanni's Kaffeewelt",
-			"url": "https://giovanniskaffeewelt.de"
+			"url": "https://giovannikaffeewelt.de"
 		}
 	}
 	</script>`}
