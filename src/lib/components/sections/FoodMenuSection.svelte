@@ -611,7 +611,7 @@
 										<div class="menu-card-price">
 											{item.price}
 										</div>
-										<div class="absolute end-0 bottom-6 text-center text-white font-base w-full ">
+										<div class="absolute end-0 bottom-6 text-center text-sm text-white font-base w-full ">
 											{item.price_desc}
 										</div>
 									</div>
