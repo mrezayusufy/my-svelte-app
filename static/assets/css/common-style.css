@@ -847,17 +847,7 @@ label {
   font-weight: 600;
   text-transform: uppercase;
 }
-.read-more.style-one:after {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  content: "";
-  width: 30px;
-  height: 2px;
-  background-color: var(--primary-black-color);
-  margin-left: 10px;
-}
-
+ 
 .header-area {
   position: relative;
   z-index: 999;

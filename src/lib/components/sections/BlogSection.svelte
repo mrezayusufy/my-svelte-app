@@ -11,14 +11,6 @@
 
 	let { posts = fallbackPosts.slice(0, 3) }: Props = $props();
 
-	function getFallbackImage(idx: number): string {
-		const fallbacks = [
-			'/assets/blog-img1.jpg',
-			'/assets/images/home-restaurant/blog/blog-img2.jpg',
-			'/assets/images/home-restaurant/blog/blog-img3.jpg'
-		];
-		return fallbacks[idx % fallbacks.length];
-	}
 </script>
 
 <section class="rs-blog py-5" id="blog" aria-label="Aktuelle Blogbeiträge">
@@ -69,7 +61,7 @@
 									</span>
 								{/if}
 							</div>
-							<h3 class="post-title  fs-5 mb-1">
+							<h3 class="post-title text-primary text-lg leading-none mb-1">
 								<a href={resolve('/blog/[slug]', { slug: post.slug })} class="text-dark leading-normal text-decoration-none">
 									{post.title}
 								</a>
@@ -82,7 +74,7 @@
 							<div class="mt-auto">
 								<a
 									href={resolve('/blog/[slug]', { slug: post.slug })}
-									class="read-more style-one d-inline-flex align-items-center"
+									class="read-more style-one d-inline-flex align-items-center mb-3 md:mb-0"
 									aria-label="Weiterlesen: {post.title}"
 								>
 									Weiterlesen <i class="far fa-arrow-right ms-2"></i>
@@ -122,12 +114,10 @@
 		color: var(--primary-color, #d0965c);
 	}
 
-	.bg-gold {
-		background-color: var(--primary-color, #d0965c);
-	}
 
 	.post-title a {
 		transition: color 0.3s ease;
+		line-height: 1;
 	}
 
 	.post-title a:hover {
@@ -138,6 +128,7 @@
 		display: -webkit-box;
 		-webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
+		line-clamp: 3;
 		overflow: hidden;
 	}
 </style>
