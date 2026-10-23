@@ -13,7 +13,7 @@ export const load: PageServerLoad = async () => {
 	try {
 		const [categoriesResult, menuResult, sectionResult, postsResult] = await Promise.all([
 			supabase.from('category_menu').select('*').order('sort_order', { ascending: true }),
-			supabase.from('menu_with_category_order').select('*').order('category_sort_order', { ascending: true }),
+			supabase.from('menu_with_category_order').select('*').order('category_sort_order', { ascending: true }).order('title', {ascending: false}),
 			supabase
 				.from('sections')
 				.select(`

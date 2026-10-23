@@ -44,7 +44,7 @@
 					.from("category_menu")
 					.select("*")
 					.order("sort_order", { ascending: true }),
-				supabase.from('menu_with_category_order').select('*').order('category_sort_order', { ascending: true }),
+				supabase.from('menu_with_category_order').select('*').order('category_sort_order', { ascending: true }).order('title', { ascending: false}),
 			]);
 
 			console.log(
@@ -260,7 +260,7 @@
 			);
 		}
 
-		return list;
+		return list 
 	});
 
 	// Total pages calculation (10 items per page)
@@ -600,22 +600,20 @@
 							{/if}
 							</div>
 							<div class="flex-col flex-1 relative">
-								<div
-									class="menu-card-header relative d-flex align-items-baseline justify-content-between"
-								>
+								<div class="menu-card-header d-flex align-items-baseline justify-content-between">
 									<div class="menu-card-title-group me-2">
 										<h3 class="menu-card-title">
 											{item.title}
 										</h3>
 									</div>
-									<div
-										class="menu-card-dots flex-1 mx-2"
-									></div>
-									<div class="menu-card-price">
-										{item.price}
-									</div>
-									<div class="absolute end-6 bottom-6 text-white font-base ">
-										{item.price_desc}
+									<div class="menu-card-dots flex-1 mx-2"></div>
+									<div class="absolute md:relative bottom-0 end-0">
+										<div class="menu-card-price">
+											{item.price}
+										</div>
+										<div class="absolute end-0 bottom-6 text-center text-white font-base w-full ">
+											{item.price_desc}
+										</div>
 									</div>
 								</div>
 
