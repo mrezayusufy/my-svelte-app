@@ -3,6 +3,7 @@
 	import { supabase } from "$lib/supabaseClient";
 	import { aosAction } from "$lib/actions/aos";
 	import type { CategoryMenu, MenuItem } from "$lib/types/menu";
+    import { asset } from "$app/paths";
 
 	let {
 		categories = [],
@@ -596,7 +597,7 @@
 									alt={item.title}
 								/>
 							{:else}
-								{item.title}
+								<img src={asset('/assets/icons/'+item.category_slug+'.svg')} alt={item.category_slug} loading="lazy" class="opacity-50"/>
 							{/if}
 							</div>
 							<div class="flex-col flex-1 relative">
