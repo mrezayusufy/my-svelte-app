@@ -28,9 +28,7 @@
 							<p class="mb-4">Giovanni's Kaffeewelt bietet authentische italienische Aromen, Kaffeespezialitäten und ein gemütliches Ambiente.</p>
 							<div class="social-box">
 								<a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-								<a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
 								<a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-								<a href="https://youtube.com" target="_blank" rel="noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
 							</div>
 						</div>
 					</div>
@@ -45,7 +43,6 @@
 								<li><a href={resolve('/uber-uns')}>Über uns</a></li>
 								<li><a href="{resolve('/')}#menu">Speisekarte</a></li>
 								<li><a href={resolve('/blog')}>Blog & Aktuelles</a></li>
-								<li><a href={resolve('/404')}>404 Seite</a></li>
 								<li><a href={resolve('/contact')}>Kontakt</a></li>
 							</ul>
 						</div>

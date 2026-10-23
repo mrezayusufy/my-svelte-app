@@ -85,7 +85,6 @@
 		<ul class="social-link">
 			<li><a href="https://facebook.com/giovanniskaffeewelt" target="_blank" rel="noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
 			<li><a href="https://instagram.com/giovanniskaffeewelt" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-			<li><a href="https://youtube.com/giovanniskaffeewelt" target="_blank" rel="noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
 		</ul>
 	</div>
 </div>
