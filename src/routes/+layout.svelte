@@ -9,7 +9,7 @@
 <svelte:head>
 	<title>Giovanni's Kaffeewelt - Restaurant & Cafe</title>
 	<!-- Favicon Icon -->
-	<link rel="shortcut icon" href={asset('/assets/images/favicon.png')} type="image/png" />
+	<link rel="shortcut icon" href={asset('/assets/logo-giovanni-kaffeewelt-light.svg')} type="image/svg+xml" />
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />

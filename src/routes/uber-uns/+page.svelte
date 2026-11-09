@@ -496,59 +496,7 @@
 				</div>
 			</section>
 			<!--====== End Testimonial Section ======-->
-
-			<!--====== Start Blog Section ======-->
-			<section class="rs-blog py-lg-5 bg-light bg-opacity-50">
-				<div class="container">
-					<div class="row justify-content-center py-5">
-						<div class="col-lg-7">
-							<!-- Section Title -->
-							<div class="section-title text-center mt-3">
-								<span class="sub-title" data-aos="fade-down" data-aos-duration="1000" use:aosAction
-									>Unser Blog</span
-								>
-								<h2 class="text-anm">Aktuelle Beiträge</h2>
-							</div>
-						</div>
-					</div>
-					<div class="row justify-content-center pb-5">
-						{#each blogPosts as post}
-							<div class="col-xl-4 col-md-6 col-sm-12">
-								<!-- Giovanni Blog Post -->
-								<div
-									class="giovanni-blog-post mb-4 shadow-sm rounded-3 overflow-hidden bg-white"
-									data-aos="fade-up"
-									data-aos-duration={post.duration}
-									use:aosAction
-								>
-									<div class="post-thumbnail overflow-hidden">
-										<img
-											src={post.image}
-											alt={post.title}
-											class="img-fluid w-100 object-fit-cover"
-											style="height: 240px; transition: transform 0.4s ease;"
-										/>
-									</div>
-									<div class="post-content p-4">
-										<div class="post-meta mb-2 text-muted small">
-											<span class="me-3"><i class="far fa-user me-1"></i>{post.author}</span>
-											<span><i class="far fa-calendar-alt me-1"></i>{post.date}</span>
-										</div>
-										<h4 class="mb-3">
-											<a href="{resolve('/')}#blog" class="text-dark text-decoration-none">
-												{post.title}
-											</a>
-										</h4>
-										<a href="{resolve('/')}#blog" class="read-more style-one">Weiterlesen</a>
-									</div>
-								</div>
-							</div>
-						{/each}
-					</div>
-				</div>
-			</section>
-			<!--====== End Blog Section ======-->
-
+	
 			<!--====== Start Instagram Section ======-->
 			<section class="giovanni-instagram-sec py-4">
 				<div class="container-fluid px-0">
