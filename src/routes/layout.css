@@ -15,9 +15,9 @@
   position: relative;
   z-index: 2;
   color: #fff;
-  padding: 0 1rem;
   display: flex;
   flex-flow: column;
+  min-height: 560px;
   h1, h2, p {
     @apply font-display;
   }
@@ -26,9 +26,7 @@
     display: flex;
     flex-flow: column;
     svg {
-      width: 480px;
-      height: 48px;
-      z-index: 0;
+      @apply w-full sm:w-100 h-12 z-0;
       position-anchor: --text-anchor;
       top: anchor(top);
       justify-self: anchor-center;
@@ -36,24 +34,30 @@
     p {
       anchor-name: --text-anchor;
       padding-top: 8px;
+      font-size: 24px;
       position: relative;
-
     }
   }
   .slide-title { 
     svg {
-      width: 480px;
-      height: 152px;
+      width: 100%;
+      height: 148px;
+      position-anchor: --slide-title;
+      position: absolute;
+      top: anchor(top);
+      justify-self: anchor-center;
     }
     h1 {
-      @apply text-5xl!;
+      @apply text-4xl!;
+      anchor-name: --slide-title;
+      padding-top: 32px;
     }
     h2 {
-      @apply text-3xl!;
+      @apply text-2xl! tracking-tighter;
     }
   }
   .price-tag { 
-    margin-top: -32px;
+    margin-top: -18px;
     svg {
 				width: 200px;
 				height: 50px;

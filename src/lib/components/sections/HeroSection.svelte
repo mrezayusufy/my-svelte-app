@@ -128,20 +128,7 @@
 
 	<!-- Prev / Next arrows -->
 	{#if sliders.length > 1}
-		<button
-			class="hero-arrow hero-arrow--prev"
-			onclick={prev}
-			aria-label="Vorherige Folie"
-		>
-			<i class="fas fa-chevron-left"></i>
-		</button>
-		<button
-			class="hero-arrow hero-arrow--next"
-			onclick={next}
-			aria-label="Nächste Folie"
-		>
-			<i class="fas fa-chevron-right"></i>
-		</button>
+		
 
 		<!-- Dot indicators -->
 		<div class="hero-dots" role="tablist" aria-label="Folien-Navigation">
@@ -199,17 +186,14 @@
 			rgba(0, 0, 0, 0.3) 100%
 		);
 	}
-
-	/* ── Slide content ───────────────────────────────────────── */
-
 	
 	.hero-cta {
-		margin-top: 8px;
+		margin-top: auto;
 		margin-inline: auto;
 	}
 
 	:global(.hero-slide-html) {
-		margin-bottom: 28px;
+		margin-bottom: 8px;
 	}
 
 	/* Headings inside the HTML block */
@@ -220,9 +204,6 @@
 		line-height: 1.2;
 		margin-bottom: 12px;
 	}
-	   
-
-	/* Price / accent paragraph */ 
 
 	/* Definition list (variants / options) */
 	:global(.hero-slide-html dl) {
@@ -233,15 +214,15 @@
 	}
 	:global(.hero-slide-html dt) {
 		color: #fff;
-		font-size: 16px;
+		font-size: 1rem;
 		letter-spacing: 2px;
 		text-transform: uppercase;
 		margin-bottom: 6px;
 	}
 	:global(.hero-slide-html dd) {
 		color: rgba(255, 255, 255, 0.88);
-		font-size: 0.95rem;
-		margin: 0 0 4px 0;
+		font-size: 1rem;
+		margin: 0 0 4px 42px;
 		padding-left: 12px;
 		position: relative;
 	}
