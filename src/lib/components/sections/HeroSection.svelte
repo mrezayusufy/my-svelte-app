@@ -1,89 +1,339 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { asset } from '$app/paths';
-	import { gsap } from 'gsap';
-	import { aosAction } from '$lib/actions/aos';
-	const {data} = $props();
+	import Siema from 'siema';
+	import type { SectionItem } from '$lib/types/menu';
+	import { sanitizeHtml } from '$lib/utils/sanitizeHtml';
+    import { asset, assets } from '$app/paths';
+    import BrushPaint from '../common/BrushPaint.svelte';
 
-	let sectionEl = $state<HTMLElement>();
+	let { sliders }: { sliders: SectionItem[] } = $props();
+
+	let sliderEl = $state<HTMLElement>();
+	let siema: Siema | null = null;
+	let currentIndex = $state(0);
+	let autoplayTimer: ReturnType<typeof setInterval> | null = null;
+
+	const AUTOPLAY_MS = 5000;
+
+	function goTo(index: number) {
+		if (!siema) return;
+		siema.goTo(index);
+		currentIndex = index;
+	}
+
+	function prev() {
+		if (!siema) return;
+		siema.prev();
+		currentIndex = (currentIndex - 1 + sliders.length) % sliders.length;
+	}
+
+	function next() {
+		if (!siema) return;
+		siema.next();
+		currentIndex = (currentIndex + 1) % sliders.length;
+	}
+
+	function startAutoplay() {
+		stopAutoplay();
+		autoplayTimer = setInterval(() => next(), AUTOPLAY_MS);
+	}
+
+	function stopAutoplay() {
+		if (autoplayTimer !== null) {
+			clearInterval(autoplayTimer);
+			autoplayTimer = null;
+		}
+	}
 
 	onMount(() => {
-		const ctx = gsap.context(() => {
-			gsap.from('.hero-content', {
-				y: 35,
-				opacity: 0,
-				duration: 1.1,
-				ease: 'power3.out'
-			});
+		if (!sliderEl || sliders.length === 0) return;
 
-			gsap.to('.hero-image.image_one img', {
-				y: -25,
-				duration: 3,
-				repeat: -1,
-				yoyo: true,
-				ease: 'sine.inOut'
-			});
+		siema = new Siema({
+			selector: sliderEl, 
+			easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+			perPage: 1,
+			startIndex: 0,
+			draggable: true,
+			loop: true,
+			onChange: function () {
+				currentIndex = (this as Siema).currentSlide;
+			}
+		});
 
-			gsap.to('.hero-image.image_two img', {
-				y: 25,
-				duration: 3.5,
-				repeat: -1,
-				yoyo: true,
-				ease: 'sine.inOut'
-			});
-		}, sectionEl);
+		// startAutoplay();
 
-		return () => ctx.revert();
+		return () => {
+			// stopAutoplay();
+			siema?.destroy();
+		};
 	});
 </script>
 
-<section
-	bind:this={sectionEl}
-	class="rs-hero bg_cover"
-	style="background-image: url('{asset('/assets/images/home-restaurant/hero/hero-bg.jpg')}');"
->
-	<!-- Hero Arch Images -->
-	<div class="hero-image image_one ">
-		<img src={data.section_images[0].image_path} alt="Italian Dish" />
-	</div>
-	<div class="hero-image image_two">
-		<img src={data.section_images[1].image_path} alt="Artisan Pasta" />
-	</div>
+<section class="rs-hero-slider">
+	<!-- Slider track -->
+	<div
+		class="hero-slider-track"
+		bind:this={sliderEl}
+		onmouseenter={stopAutoplay}
+		onmouseleave={startAutoplay}
+		role="region"
+		aria-label="Hero slideshow"
+	>
+		{#each sliders as slide, i}
+			<div class="hero-slide" aria-hidden={i !== currentIndex}>
+				<!-- Background image -->
+				{#if slide.section_images?.[0]?.image_path}
+					<div
+						class="hero-slide-bg"
+						style="background-image: url('{slide.section_images[0].image_path}');"
+					></div>
+				{/if}
+				<!-- Dark overlay -->
+				<div class="hero-slide-overlay"></div>
 
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-6">
-				<!-- Hero Content -->
-				<div class="hero-content text-center"> 
-					<h1 class="text-anm">{data.title}</h1>
-					<p data-aos="fade-up" data-aos-duration="1000" use:aosAction>
-						{data.content}
-					</p>
-					<div class="giovanni-button mb-3 pb-3 mb-lg-5 pb-lg-5" data-aos="fade-up" data-aos-duration="1200" use:aosAction>
-						<a href="#reservation" class="theme-btn style-one">Tisch reservieren</a>
-					</div>
-					<div class="row">
-						<div class="col-md-6">
-							<!-- Counter Experience -->
-							<div class="giovanni-counter-item text-center mb-4" data-aos="fade-up" data-aos-duration="1300" use:aosAction>
-								<div class="content">
-									<h2 class="mb-4"><span class="counter">25</span>+</h2>
-									<p>Jahre Erfahrung</p>
+				<!-- Content -->
+				<div class="container h-100">
+					
+					<div class="row h-100 align-items-center justify-content-center">
+						<div class="col-lg-9 text-left">
+							<div class="hero-slide-content">
+								<div class="text-white font-display relative flex flex-col items-center text-center text-3xl mb-3 slide-meta-title">
+									<BrushPaint cls="fill-green-700 absolute" />
+									<p>Montag bis Donnerstag</p>
 								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<!-- Counter Rating -->
-							<div class="giovanni-counter-item text-center mb-4" data-aos="fade-up" data-aos-duration="1400" use:aosAction>
-								<div class="content">
-									<h2 class="mb-4">4.9<i class="fas fa-star ms-1"></i></h2>
-									<p>Durchschnittliche Bewertung</p>
+								<div class="hero-slide-html relative flex flex-col">
+									<div class="relative max-w-120 text-center h-38 flex justify-center flex-col slide-title">
+										<BrushPaint cls="fill-red-800 absolute"/>
+										<h1 class="relative">{slide.title}</h1>
+										<h2 class="relative">{slide.subtitle}</h2>
+									</div>
+									<div class="relative max-w-56 flex flex-col items-center price-tag">
+										<BrushPaint cls="fill-amber-500 max-w-56 top-0 absolute"/>
+										<p class="relative text-amber-950 text-center text-5xl my-2">{slide.meta_title}</p>
+									</div>
+									<div class="relative z-20 flex">
+										{@html sanitizeHtml(slide.content)}
+									</div>
+								</div>
+								<div class="hero-cta">
+									<a href="#reservation" class="theme-btn style-one">Tisch reservieren</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		{/each}
 	</div>
+
+	<!-- Prev / Next arrows -->
+	{#if sliders.length > 1}
+		<button
+			class="hero-arrow hero-arrow--prev"
+			onclick={prev}
+			aria-label="Vorherige Folie"
+		>
+			<i class="fas fa-chevron-left"></i>
+		</button>
+		<button
+			class="hero-arrow hero-arrow--next"
+			onclick={next}
+			aria-label="Nächste Folie"
+		>
+			<i class="fas fa-chevron-right"></i>
+		</button>
+
+		<!-- Dot indicators -->
+		<div class="hero-dots" role="tablist" aria-label="Folien-Navigation">
+			{#each sliders as _, i}
+				<button
+					class="hero-dot"
+					class:active={i === currentIndex}
+					onclick={() => goTo(i)}
+					role="tab"
+					aria-selected={i === currentIndex}
+					aria-label="Folie {i + 1}"
+				></button>
+			{/each}
+		</div>
+	{/if}
 </section>
+
+<style>
+	/* ── Wrapper ─────────────────────────────────────────────── */
+	.rs-hero-slider {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		background-color: var(--primary-black-color, #111);
+	}
+
+
+	/* ── Individual slide ────────────────────────────────────── */
+	.hero-slide {
+		position: relative;
+		height: 100vh;
+		min-height: 600px;
+		display: flex;
+		align-items: center;
+	}
+
+	/* Background image */
+	.hero-slide-bg {
+		position: absolute;
+		inset: 0;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		transition: transform 6s ease-out;
+	}
+
+	/* Dark gradient overlay */
+	.hero-slide-overlay {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(
+			to right,
+			rgba(0, 0, 0, 0.72) 0%,
+			rgba(0, 0, 0, 0.45) 60%,
+			rgba(0, 0, 0, 0.3) 100%
+		);
+	}
+
+	/* ── Slide content ───────────────────────────────────────── */
+
+	
+	.hero-cta {
+		margin-top: 8px;
+		margin-inline: auto;
+	}
+
+	:global(.hero-slide-html) {
+		margin-bottom: 28px;
+	}
+
+	/* Headings inside the HTML block */
+	:global(.hero-slide-html h1),
+	:global(.hero-slide-html h2),
+	:global(.hero-slide-html h3) {
+		color: #fff;
+		line-height: 1.2;
+		margin-bottom: 12px;
+	}
+	   
+
+	/* Price / accent paragraph */ 
+
+	/* Definition list (variants / options) */
+	:global(.hero-slide-html dl) {
+		margin: 16px;
+		max-width: 360px;
+		text-align: left;
+		display: inline-block;
+	}
+	:global(.hero-slide-html dt) {
+		color: #fff;
+		font-size: 16px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		margin-bottom: 6px;
+	}
+	:global(.hero-slide-html dd) {
+		color: rgba(255, 255, 255, 0.88);
+		font-size: 0.95rem;
+		margin: 0 0 4px 0;
+		padding-left: 12px;
+		position: relative;
+	}
+	:global(.hero-slide-html dd::before) {
+		content: '✔';
+		position: absolute;
+		left: -6px;
+		color:  #199600;
+	}
+
+	/* Lists */
+	:global(.hero-slide-html ul),
+	:global(.hero-slide-html ol) {
+		color: rgba(255, 255, 255, 0.88);
+		padding-left: 1.25rem;
+		margin-bottom: 16px;
+		text-align: left;
+		display: inline-block;
+	}
+	:global(.hero-slide-html li) {
+		margin-bottom: 4px;
+	}
+
+	/* Inline emphasis */
+	:global(.hero-slide-html strong),
+	:global(.hero-slide-html b) {
+		color: #fff;
+	}
+	:global(.hero-slide-html em),
+	:global(.hero-slide-html i) {
+		color: rgba(255, 255, 255, 0.8);
+	}
+
+	/* ── Arrows ──────────────────────────────────────────────── */
+	.hero-arrow {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 10;
+		width: 52px;
+		height: 52px;
+		border-radius: 50%;
+		border: 2px solid rgba(255, 255, 255, 0.5);
+		background: rgba(0, 0, 0, 0.3);
+		color: #fff;
+		font-size: 18px;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: background 0.3s, border-color 0.3s;
+		backdrop-filter: blur(4px);
+	}
+	.hero-arrow:hover {
+		background: var(--primary-color, #c8a97e);
+		border-color: var(--primary-color, #c8a97e);
+	}
+	.hero-arrow--prev { left: 24px; }
+	.hero-arrow--next { right: 24px; }
+
+	@media (max-width: 575.98px) {
+		.hero-arrow { width: 40px; height: 40px; font-size: 14px; }
+		.hero-arrow--prev { left: 12px; }
+		.hero-arrow--next { right: 12px; }
+	}
+
+	/* ── Dots ────────────────────────────────────────────────── */
+	.hero-dots {
+		position: absolute;
+		bottom: 32px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 10;
+		display: flex;
+		gap: 10px;
+		align-items: center;
+	}
+
+	.hero-dot {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.45);
+		border: none;
+		cursor: pointer;
+		transition: background 0.3s, transform 0.3s, width 0.3s;
+		padding: 0;
+	}
+	.hero-dot.active {
+		background: var(--primary-color, #c8a97e);
+		transform: scale(1.3);
+		width: 28px;
+		border-radius: 5px;
+	}
+</style>

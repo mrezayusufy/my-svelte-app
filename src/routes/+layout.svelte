@@ -20,7 +20,7 @@
 	<!-- Flaticon css -->
 	<link rel="stylesheet" href={asset('/assets/fonts/flaticon/flaticon_giovanni.css')} />
 	<!-- FontAwesome css -->
-	<link rel="stylesheet" href={asset('/assets/fonts/fontawesome/css/all.min.css')} />
+	<link rel="stylesheet" href={asset('/assets/fonts/fontawesome/css/all.min.css')} /> 
 	<!-- Bootstrap css -->
 	<link rel="stylesheet" href={asset('/assets/css/plugins/bootstrap.min.css')} />
 	<!-- Common Style css -->

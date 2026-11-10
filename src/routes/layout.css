@@ -1,5 +1,65 @@
 @import 'tailwindcss';
+@font-face {
+  font-family: 'Segoe Script';
+  src: url('/assets/fonts/segoescb.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 @theme {
-  --font-base:  "Marcellus", serif;;
+  --font-base:  "Marcellus", serif;
+  --font-display: "Segoe Script", serif;
   --color-primary: #2D4443;
+}
+.hero-slide-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 0 1rem;
+  display: flex;
+  flex-flow: column;
+  h1, h2, p {
+    @apply font-display;
+  }
+  .slide-meta-title {
+    margin-top: 16px;
+    display: flex;
+    flex-flow: column;
+    svg {
+      width: 480px;
+      height: 48px;
+      z-index: 0;
+      position-anchor: --text-anchor;
+      top: anchor(top);
+      justify-self: anchor-center;
+    }
+    p {
+      anchor-name: --text-anchor;
+      padding-top: 8px;
+      position: relative;
+
+    }
+  }
+  .slide-title { 
+    svg {
+      width: 480px;
+      height: 152px;
+    }
+    h1 {
+      @apply text-5xl!;
+    }
+    h2 {
+      @apply text-3xl!;
+    }
+  }
+  .price-tag { 
+    margin-top: -32px;
+    svg {
+				width: 200px;
+				height: 50px;
+			}
+    p {
+      @apply text-3xl;
+    }
+  }
 }

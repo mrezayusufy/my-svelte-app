@@ -21,6 +21,7 @@ export const load: PageServerLoad = async () => {
 					slug,
 					title,
 					subtitle,
+					meta_title,
 					content,
 					section_images (
 						id,
@@ -28,8 +29,7 @@ export const load: PageServerLoad = async () => {
 						alt_text,
 						sort_order
 					)
-				`)
-				.eq('is_active', true),
+				`),
 			supabase
 				.from('posts')
 				.select(`
@@ -77,15 +77,17 @@ export const load: PageServerLoad = async () => {
 		console.error('Error fetching data from Supabase:', err);
 		latestPosts = fallbackPosts.slice(0, 3);
 	}
-
+	// Collect all 'slider' rows into an array; map the rest by slug
+	const sliders = section.filter((s) => s.slug === 'slider');
 	const sections = Object.fromEntries(
-		section.map((s) => [s.slug, s])
+		section.filter((s) => s.slug !== 'slider').map((s) => [s.slug, s])
 	);
-
+ 
 	return {
 		categories: categories.length > 0 ? categories : [],
 		menu: menu.length > 0 ? menu : [],
 		sections: sections,
+		sliders: sliders,
 		latestPosts: latestPosts
 	};
 };

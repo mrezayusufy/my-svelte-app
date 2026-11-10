@@ -55,7 +55,7 @@
 	<div id="smooth-content">
 		<main>
 			<!-- Hero Section -->
-			<HeroSection data={data.sections['hero']} />
+			<HeroSection sliders={data.sliders} />
 
 			<!-- About Section -->
 			<AboutSection data={data.sections['about']} />

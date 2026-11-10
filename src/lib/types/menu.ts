@@ -23,6 +23,7 @@ export interface SectionItem {
   slug: string;
   title: string;
   subtitle: string | null;
+	meta_title: string | null;
   content: string | null;
   section_images: {
     id: number;
